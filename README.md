@@ -1,2 +1,2 @@
-# rodrig.github.io
+# simonrodrig.github.io
 Personal Website (under-construction.gif)
