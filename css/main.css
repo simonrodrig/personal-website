@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+
+html {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+body {
+    margin: 0;
+    background-color: white;
+    color: black;
+}
+
+.hero-bg {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    padding: 0em;
+
+}
+
+.hero-bg img {
+    width: 50%;
+}
+
+.hero-bg button {
+    position: absolute;
+    bottom: 2em;
+    border: none;
+    background-color: white;
+    font-family: 'IBM Plex Mono';
+    font-weight: bold;
+    font-size: 1rem;
+
+}
+
+.intro {
+    text-align: center;
+    margin: 1.5em;
+}
+
+.intro h1 {
+    font-weight: bold; 
+    font-size: 3rem;
+    margin: 0;
+}
+
+.intro p {
+    font-weight: bold;
+    margin-top: 0;
+    
+}
+
+.intro ul {
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro a {
+    text-decoration: none;
+    color: gray;
+
+    padding: 0.1em 0.4em;
+}
+
+.intro a:hover, a:active {
+    background-color: #202020;
+    color: white;
+    border-radius: 1em;
+}
+
+.about {
+    text-align: center;
+    padding: 3em;
+}
+
+.about p {
+    text-align: justify;
+}
+
+.about img {
+    width: 100%;
+}
+
+.vote {
+    padding: 3em;
+}
+
+.vote h2 {
+    text-align: center;
+}
+
+.vote p {
+    text-align: justify;
+}
+
+.vote img {
+    width: 100%;
+}
+
+.links {
+    text-align: center;
+    background-color: #202020;
+    color: white;
+    margin: 0;
+    height: 12vh;
+}
+
+.links h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: normal;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@media (min-width: 930px) {
+
+    .hero-bg {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .hero-bg img {
+        width: 35%;
+    }
+
+
+    .intro {
+        text-align: center;
+        margin-left: 3em;
+    }
+
+    .intro h1 {
+        text-align: left;
+    }
+
+    .intro p {
+        text-align: left;
+    }
+
+    .intro ul {
+        margin: 0;
+    }
+
+    .about {
+        display: flex;
+        text-align: left;
+        padding: 0;
+    }
+
+    .about img {
+        width: 50%;
+        object-fit: cover;
+    }
+
+    .about-text {
+        text-align: left;
+        padding: 2em;
+        width: 50%;
+        object-fit: cover;
+        box-sizing: border-box;
+    }
+
+
+    .vote {
+        padding: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        height: 50%;
+
+    }
+
+    .vote-text {
+        width: 50%;
+        padding: 2em;
+        height: 0;
+        padding-bottom: 50%;
+    }
+    
+    .vote h2 {
+        text-align: left;
+    }
+    
+    .vote p {
+        text-align: justify;
+    }
+    
+    .vote img {
+        width: 50%;
+        object-fit: cover;
+    }
+
+
+    
+}
