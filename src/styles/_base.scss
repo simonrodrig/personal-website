@@ -1,64 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
-$font-primary: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-$font-secondary: 'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$font-primary: 'Poppins', sans-serif;
+$font-secondary: 'IBM Plex Sans', sans-serif;
 
-$clr-background-dark: #1C1E26;
+$clr-background-dark: #1c1e26;
 $clr-background-light: #232530;
-$clr-accent: #E95678;
+$clr-accent: #e95678;
 
-$clr-text-primary: #FFFFFF;
-$clr-text-secondary: #E9E9E9;
+$clr-text-primary: #ffffff;
+$clr-text-secondary: #d0d0d0;
 
 $border-radius-sm: 12px;
 $border-radius-lg: 48px;
 
+$size-tablet: 65em;
+$size-phone: 50em;
+
+$filter-shadow: drop-shadow(0px 0px 5px rgb(0 0 0 / 0.4));
+
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-h1, .heading--primary {
-    font-family: $font-primary;
-    font-size: 5rem;
-    font-weight: 600;
-    color: $clr-text-primary;
+:root {
+  background-color: $clr-background-dark;
 }
 
-h2, .heading--secondary {
-    font-family: $font-secondary;
-    font-size: 2rem;
-    font-weight: 400;
-    color: $clr-text-secondary;
+h1,
+.heading--primary {
+  font-family: $font-primary;
+  font-size: clamp(1.5rem, 8vw + 1rem, 6rem);
+  font-weight: 600;
+  color: $clr-text-primary;
+  line-height: 1.125;
 }
 
-h3, h4, h5, h6, .heading--small {
-    font-family: $font-secondary;
-    font-size: 1.75rem;
-    font-weight: 400;
-    color: $clr-text-secondary;
+h2,
+.heading--secondary {
+  font-family: $font-secondary;
+  font-size: clamp(1rem, 8vw + 0.3rem , 1.5rem);
+  font-weight: 400;
+  color: $clr-text-secondary;
+  line-height: 1.5;
 }
 
-p, .text--body {
-    font-family: $font-secondary;
-    font-size: 1.125rem;
-    font-weight: 400;
-    color: $clr-text-secondary;
+h3,
+h4,
+h5,
+h6,
+.heading--small {
+  font-family: $font-secondary;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: $clr-text-secondary;
 }
 
-a, .text--link {
-    font-family: $font-secondary;
-    font-size: 1.125rem;
-    font-weight: 500;
-    color: $clr-accent;
-    text-decoration: none;
+p,
+.text--body {
+  font-family: $font-secondary;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: $clr-text-secondary;
+}
+
+a,
+.text--link {
+  font-family: $font-secondary;
+  font-size: 1rem;
+  font-weight: 500;
+  color: $clr-accent;
+  text-decoration: none;
 }
 
 .text--logo {
-    font-family: $font-primary;
-    font-size: 2rem;
-    font-weight: 700;
-    color: $clr-accent;
+  font-family: $font-primary;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $clr-accent;
 }
