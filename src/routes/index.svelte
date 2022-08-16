@@ -83,10 +83,12 @@
     }
 
     .Portrait-Container {
+      max-width: 100vw;
+      max-height: 100vw;
+
       --clamp: clamp(25em, 30vw + 15em, 40em);
       height: var(--clamp);
       width: var(--clamp);
-      aspect-ratio: 1;
     }
 
     .left {
