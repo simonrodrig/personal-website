@@ -31,7 +31,7 @@
     
   }
   
-  .Card:focus {
+  .Card:focus-visible {
     outline: 4px solid base.$clr-accent;
   }
 
