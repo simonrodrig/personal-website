@@ -115,13 +115,12 @@
       }
 
       transition: outline 300ms ease-out;
-
     }
 
     .NavOpen:focus-visible {
       outline: 2px solid base.$clr-accent;
     }
-    
+
     .NavBar {
       position: fixed;
       bottom: -215px;

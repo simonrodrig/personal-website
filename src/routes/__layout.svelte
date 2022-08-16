@@ -16,6 +16,3 @@
 <NavBar />
 <slot />
 <Footer />
-
-<style lang="scss">
-</style>
