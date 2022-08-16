@@ -47,7 +47,7 @@
 </div>
 
 <style lang="scss">
-  @use "../styles/base";
+  @use "../../styles/base";
 
   .Blob {
     svg {

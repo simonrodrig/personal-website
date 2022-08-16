@@ -1,6 +1,6 @@
 <script lang="ts">
   import { ArrowRightIcon, CalendarIcon, GlobeIcon, LinkIcon } from "svelte-feather-icons";
-  import Portrait from "../components/Portrait.svelte";
+  import Portrait from "../components/Blobs/Portrait.svelte";
   import headshot from "../assets/headshot.jpeg";
   import Card from '../components/Card.svelte';
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Blob from "../components/Blob.svelte";
+  import Blob from "./Blob.svelte";
 </script>
 
 <div class="blobs">
@@ -17,7 +17,7 @@
 </div>
 
 <style lang="scss">
-  @use "../styles/base";
+  @use "../../styles/base";
 
   .blobs {
     position: absolute;
