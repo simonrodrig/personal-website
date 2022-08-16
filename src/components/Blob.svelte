@@ -1,18 +1,11 @@
 <script lang="ts">
   export let color: string | undefined = undefined;
 
-  function randChoice<T>(lst: T[]): T {
-    return lst[Math.floor(Math.random() * lst.length)];
-  }
-
-  function newShape(currShape: string, shapes: string[]) {
-    let s = currShape;
-
-    while (s == currShape) {
-      s = randChoice(shapes);
+  function shuffleArray<T>(array: T[]) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
     }
-
-    return s;
   }
 
   const shapes = [
@@ -25,23 +18,30 @@
     "M71.4,-40.2C85.4,-17,84.6,15.7,70.3,39.4C55.9,63.1,28,77.9,-0.4,78.1C-28.8,78.4,-57.6,64.1,-70.9,41C-84.2,17.8,-82.1,-14.2,-67.7,-37.6C-53.3,-61,-26.7,-75.7,1,-76.3C28.7,-76.9,57.4,-63.3,71.4,-40.2Z",
   ];
 
-  let currShape = randChoice(shapes);
+  shuffleArray(shapes);
 
-  setInterval(() => {
-    currShape = newShape(currShape, shapes);
-  }, 500);
+  // We want to play the animation forward and backwards. Do this manually for now.
+  const s = [...shapes, ...[...shapes].reverse()];
+
+  const animateProps = {
+    attributeName: "d",
+    dur: "20s",
+    repeatCount: "indefinite",
+    values: s.join(";"),
+  };
+
 </script>
 
 <div class="Blob">
   <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
     {#if color !== undefined}
-      <path
-        style:--color={color}
-        d={currShape}
-        transform="translate(100 100)"
-      />
+      <path style:--color={color} transform="translate(100 100)">
+        <animate {...animateProps} />
+      </path>
     {:else}
-      <path d={currShape} transform="translate(100 100)" />
+      <path transform="translate(100 100)">
+        <animate {...animateProps} />
+      </path>
     {/if}
   </svg>
 </div>
@@ -54,7 +54,6 @@
       path {
         --color: #{base.$clr-background-light};
         fill: var(--color);
-        transition: d 0.5s linear;
       }
     }
   }

@@ -11,7 +11,7 @@
   <Seo />
 </svelte:head>
 
-<!-- <BlobBackground /> -->
+<BlobBackground />
 
 <NavBar />
 <slot />
