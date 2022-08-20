@@ -20,7 +20,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 120%;
+    // FIXME: How to make this the height of the body instead?
+    height: 100%;
     overflow: hidden;
     pointer-events: none;
   }
