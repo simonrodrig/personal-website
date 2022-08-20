@@ -94,6 +94,7 @@
       margin: 1em;
       border: none;
       box-sizing: border-box;
+      z-index: 10;
 
       padding: 1em;
 
