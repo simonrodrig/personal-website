@@ -16,6 +16,9 @@
       </nav>
     </li>
     <li class="copyright-message"><p>© 2022 Simon Rodriguez</p></li>
+    <li>
+      <p>This website was written with Svelte and SvelteKit. See the source code <a href="https://github.com/simonrodrig/simonrodrig.github.io">here</a>.</p>
+    </li>
   </ul>
 </footer>
 
@@ -62,9 +65,17 @@
       }
     }
 
-    .copyright-message > p {
+    p {
       font-size: 1rem;
       color: base.$clr-text-primary;
+      padding: 0 2em;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: base.$size-phone) {
+    .Footer {
+      padding-bottom: 4em;
     }
   }
 </style>
