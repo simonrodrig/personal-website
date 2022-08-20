@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { onMount } from "svelte";
+
   export let color: string | undefined = undefined;
 
   function shuffleArray<T>(array: T[]) {
@@ -30,18 +32,43 @@
     values: s.join(";"),
   };
 
+  let showAnim = true;
+
+  onMount(() => {
+    const query = "(prefers-reduced-motion: reduce)";
+    const queryList = window.matchMedia(query);
+
+    const verifyMotion = (query: MediaQueryList) => {
+      if (queryList.matches)
+        showAnim = false;
+      else
+        showAnim = true;
+    }
+
+    verifyMotion(queryList);
+    queryList.addEventListener('change', () => verifyMotion(queryList))
+
+  });
 </script>
 
 <div class="Blob">
   <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
     {#if color !== undefined}
-      <path style:--color={color} transform="translate(100 100)">
-        <animate {...animateProps} />
-      </path>
+      {#if showAnim}
+        <path style:--color={color} transform="translate(100 100)">
+          <animate {...animateProps} />
+        </path>
+      {:else}
+        <path style:--color={color} transform="translate(100 100)" d={s[0]} />
+      {/if}
     {:else}
-      <path transform="translate(100 100)">
-        <animate {...animateProps} />
-      </path>
+      {#if showAnim}
+        <path transform="translate(100 100)">
+          <animate {...animateProps} />
+        </path>
+      {:else}
+        <path transform="translate(100 100)" d={s[0]} />
+      {/if}
     {/if}
   </svg>
 </div>
