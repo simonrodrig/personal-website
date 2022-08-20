@@ -8,9 +8,7 @@
 </script>
 
 <div class="Card" tabindex="0">
-  <div class="block">
-    <svelte:component this={icon} {...props} />
-  </div>
+  <svelte:component this={icon} {...props} />
   <slot />
 </div>
 
@@ -18,17 +16,13 @@
   @use '../styles/base';
 
   .Card {
-   /* aspect-ratio: 450/270; */
    padding: 2em;
    background-color: base.$clr-background-light;
    border-radius: base.$border-radius-lg;
 
     :global(svg) {
        color: base.$clr-text-primary;
-       /* width: 2em;
-       height: 2em; */
     }
-    
   }
   
   .Card:focus-visible {

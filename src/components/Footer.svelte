@@ -6,33 +6,23 @@
   } from "svelte-feather-icons";
 </script>
 
-<div class="Footer">
+<footer class="Footer">
   <ul>
     <li class="links">
-      <ul>
-        <li><a href="https://github.com/simonrodrig"><GithubIcon /></a></li>
-        <li>
-          <a href="https://www.instagram.com/simon_rodrig/"><InstagramIcon /></a
-          >
-        </li>
-        <li><a href="https://www.linkedin.com/"><LinkedinIcon /></a></li>
-      </ul>
+      <nav>
+        <a href="https://github.com/simonrodrig"><GithubIcon /></a>
+        <a href="https://www.instagram.com/simon_rodrig/"><InstagramIcon /></a>
+        <a href="https://www.linkedin.com/"><LinkedinIcon /></a>
+      </nav>
     </li>
     <li class="copyright-message"><p>© 2022 Simon Rodriguez</p></li>
   </ul>
-</div>
+</footer>
 
 <style lang="scss">
   @use "../styles/base";
 
-  ul {
-    list-style: none;
-    display: flex;
-    gap: 1em;
-    justify-content: center;
-    align-items: center;
-  }
-
+  // FIXME: Why does this need to be set?
   :global(body) {
     padding: 0;
     margin: 0;
@@ -42,20 +32,32 @@
   .Footer {
     --height: 10em;
     min-height: var(--height);
-    margin-top: 3em;
-
+    
     background-color: base.$clr-background-light;
     border-top: 3px solid base.$clr-accent;
+    margin-top: 3em;
 
     /* Top-level list */
     > ul {
+      list-style: none;
+
+      display: flex;
       flex-flow: column;
+      gap: 1em;
+      justify-content: center;
+      align-items: center;
+      
       height: var(--height);
     }
 
     /* Icons */
-    .links > ul {
-      > li :global(svg) {
+    .links > nav {
+      display: flex;
+      gap: 1em;
+      justify-content: center;
+      align-items: center;
+
+      > a :global(svg) {
         color: base.$clr-text-primary;
       }
     }

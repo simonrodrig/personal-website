@@ -4,7 +4,7 @@
   import headshot from "../assets/headshot.jpeg";
   import Card from '../components/Card.svelte';
 
-  const props = {strokeWidth: '2.3', size: '35'}
+  const iconProps = {strokeWidth: '2.3', size: '35'}
 </script>
 
 <section id="home" class="hero">
@@ -30,19 +30,19 @@
 </section>
 
 <section class="quick-facts">
-  <Card icon={GlobeIcon} {props}> 
+  <Card icon={GlobeIcon} props={iconProps}> 
     <h2 id="about">About Me</h2>
     <p>Hey there! I’m a recent college graduate with a passion for tech. When I’m not working, you can find me cooking, spending time with my cats, or playing video games!</p>
   </Card>
-  <Card icon={CalendarIcon} {props}>
+  <Card icon={CalendarIcon} props={iconProps}>
     <h2>What I'm up to</h2>
     <p>Currently I'm looking for work! I'm available to work <b>remote in the US</b>, or somewhere in the <b>Massachusetts area</b>.</p>
   </Card>
-  <Card icon={LinkIcon} {props}>
+  <Card icon={LinkIcon} props={iconProps}>
     <h2 id="contact">Contact</h2>
     <p>If you’re interested in working with me, please reach me through <em>simon[at]rodrig[dot]dev.</em></p>
   </Card>
-  <Card icon={CalendarIcon} {props}>
+  <Card icon={CalendarIcon} props={iconProps}>
     
   </Card>
 </section>
@@ -68,7 +68,6 @@
     .right,
     .left {
       max-width: 40em;
-      /* flex: 1; */
     }
 
     .cta {
@@ -185,7 +184,6 @@
         "four";
 
       :global():nth-child(4) {
-        /* aspect-ratio: var(--aspect-ratio); */
         min-height: unset;
       }
     }

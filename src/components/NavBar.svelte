@@ -12,7 +12,7 @@
 
   $: isMobileViewOpen ? navHeight.set(215) : navHeight.set(0);
 
-  let navRef: HTMLDivElement;
+  let navRef: HTMLElement;
   const handleDocumentClick = (e: MouseEvent) => {
     if (navRef !== undefined && isMobileViewOpen && !(e.target === navRef)) {
       isMobileViewOpen = false;
@@ -34,7 +34,7 @@
   {/if}
 </button>
 
-<div
+<nav
   bind:this={navRef}
   class="NavBar"
   style:transform={`translateY(${-$navHeight}px)`}
@@ -43,8 +43,6 @@
     <a class="text--logo" href="/" tabindex="0">rodrig.dev</a>
   </div>
 
-  <div class="center" />
-
   <div class="right">
     <ul>
       <li><a href="#home" tabindex="0">Home</a></li>
@@ -52,7 +50,7 @@
       <li><a href="#contact" tabindex="0">Contact</a></li>
     </ul>
   </div>
-</div>
+</nav>
 
 <style lang="scss">
   @use "../styles/base";
