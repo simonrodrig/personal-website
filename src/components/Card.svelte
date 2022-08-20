@@ -19,6 +19,7 @@
    padding: 2em;
    background-color: base.$clr-background-light;
    border-radius: base.$border-radius-lg;
+   filter: drop-shadow(0px 0px 16px base.$clr-background-dark);
 
     :global(svg) {
        color: base.$clr-text-primary;

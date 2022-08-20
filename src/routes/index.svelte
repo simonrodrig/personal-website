@@ -1,10 +1,17 @@
 <script lang="ts">
-  import { ArrowRightIcon, CalendarIcon, GlobeIcon, LinkIcon } from "svelte-feather-icons";
+  import {
+    ArrowRightIcon,
+    CalendarIcon,
+    GlobeIcon,
+    LinkIcon,
+    SunIcon,
+  } from "svelte-feather-icons";
   import Portrait from "../components/Blobs/BlobPortrait.svelte";
   import headshot from "../assets/headshot.jpeg";
-  import Card from '../components/Card.svelte';
+  import Card from "../components/Card.svelte";
+  import resumelink from '../assets/Resume.pdf';
 
-  const iconProps = {strokeWidth: '2.3', size: '35'}
+  const iconProps = { strokeWidth: "2.3", size: "35" };
 </script>
 
 <section id="home" class="hero">
@@ -22,7 +29,7 @@
       Developer with an interest in frontend web development, UI/UX design, and
       open source.
     </p>
-    <a class="cta" href="/">
+    <a class="cta" href="#say-hello">
       <p class="text--link">Say Hello</p>
       <ArrowRightIcon />
     </a>
@@ -30,23 +37,53 @@
 </section>
 
 <section class="quick-facts">
-  <Card icon={GlobeIcon} props={iconProps}> 
+  <Card icon={GlobeIcon} props={iconProps}>
     <h2 id="about">About Me</h2>
-    <p>Hey there! I’m a recent college graduate with a passion for tech. When I’m not working, you can find me cooking, spending time with my cats, or playing video games!</p>
+    <p>
+      Hey there! I’m a recent college graduate with a passion for tech. When I’m
+      not working, you can find me cooking, spending time with my cats, or
+      playing video games!
+    </p>
   </Card>
   <Card icon={CalendarIcon} props={iconProps}>
     <h2>What I'm up to</h2>
-    <p>Currently I'm looking for work! I'm available to work <b>remote in the US</b>, or somewhere in the <b>Massachusetts area</b>.</p>
+    <p>
+      Currently I'm looking for work! I'm available to work <b
+        >remote in the US</b
+      >, or somewhere in the <b>Massachusetts area</b>.
+    </p>
   </Card>
   <Card icon={LinkIcon} props={iconProps}>
     <h2 id="contact">Contact</h2>
-    <p>If you’re interested in working with me, please reach me through <em>simon[at]rodrig[dot]dev.</em></p>
+    <p>
+      If you’re interested in working with me, please reach me through <em
+        >simon[at]rodrig[dot]dev.</em
+      >
+    </p>
   </Card>
-  <Card icon={CalendarIcon} props={iconProps}>
-    
+  <Card icon={SunIcon} props={iconProps}>
+    <h2 id="say-hello">Say Hello!</h2>
+    <h3>Résumé</h3>
+    <p>
+      <a href={resumelink}>Regular</a> •
+      <a href="">Machine-Readable Version</a> •
+      <a
+        href="https://simonrodrig.notion.site/Resume-4c69524a7aef4c379fec3e3ba14236b2"
+        >Web Version</a
+      >
+    </p>
+
+    <h3>Links</h3>
+    <p>
+      <a href="https://github.com/simonrodrig">GitHub</a> •
+      <a href="https://www.instagram.com/simon_rodrig/">Instagram</a>
+      •
+      <a href="https://www.linkedin.com/in/simon-rodriguez-6b3a69193/"
+        >LinkedIn</a
+      >
+    </p>
   </Card>
 </section>
-
 
 <style lang="scss">
   @use "../styles/base";
@@ -75,7 +112,7 @@
       flex-flow: row;
       align-items: center;
       gap: 0.3em;
-      
+
       p {
         font-size: 1.25rem;
       }
@@ -106,23 +143,24 @@
     max-width: 75em;
     margin: auto;
 
-    grid-template-areas: "one two three"
-                         "four four four"
-                         "four four four";
+    grid-template-areas:
+      "one two three"
+      "four four four"
+      "four four four";
 
-    :global():nth-child(1) {
+    :global(div):nth-child(1) {
       grid-area: one;
     }
 
-    :global():nth-child(2) {
+    :global(div):nth-child(2) {
       grid-area: two;
     }
 
-    :global():nth-child(3) {
+    :global(div):nth-child(3) {
       grid-area: three;
     }
 
-    :global():nth-child(4) {
+    :global(div):nth-child(4) {
       grid-area: four;
       aspect-ratio: unset;
       min-height: 20em;
@@ -133,6 +171,10 @@
       font-weight: 600;
       font-size: 1.5rem;
       line-height: 2;
+    }
+
+    h3 {
+      margin: 0.3em 0;
     }
 
     p {
@@ -156,9 +198,8 @@
         justify-content: center;
       }
 
-      .right>* {
+      .right > * {
         text-align: center;
-
       }
       .cta {
         justify-content: center;
@@ -177,7 +218,7 @@
 
   @media (max-width: base.$size-phone) {
     .quick-facts {
-      grid-template-areas: 
+      grid-template-areas:
         "one"
         "two"
         "three"

@@ -133,6 +133,7 @@
       border-radius: base.$border-radius-sm base.$border-radius-sm 0 0;
       .right > ul {
         flex-flow: column;
+        align-items: center;
       }
     }
   }

@@ -10,10 +10,6 @@
   <div class="blob-contain blob-2">
     <Blob />
   </div>
-
-  <div class="blob-contain blob-3">
-    <Blob />
-  </div>
 </div>
 
 <style lang="scss">
@@ -24,7 +20,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 120%;
     overflow: hidden;
     pointer-events: none;
   }
@@ -36,19 +32,13 @@
   .blob-1 {
     top: -25em;
     left: -30em;
-
     width: 55em;
   }
 
   .blob-2 {
-    right: -65em;
+    right: -35em;
     top: -20em;
-    /* width: 100em; */
-    width: 80vw;
-  }
-
-  .blob-3 {
-    display: none;
+    width: clamp(70vw, 10vw + 1rem, 80vw);
   }
 </style>
 
