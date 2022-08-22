@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-  <title>Simon Rodriguez</title>
+  <title>Simon Rodriguez | Front-end Software Developer</title>
   <Seo />
 </svelte:head>
 
