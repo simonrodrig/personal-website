@@ -24,6 +24,7 @@
 
 <button
   class="NavOpen"
+  aria-label="Open Navigation"
   on:click|stopPropagation={() => (isMobileViewOpen = !isMobileViewOpen)}
   style:transform={`translateY(${-$navHeight}px)`}
 >
