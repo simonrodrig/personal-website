@@ -1,5 +1,6 @@
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
+import { imagePreprocessor } from 'svimg';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -11,14 +12,24 @@ const config = {
   // 	}
   // }),
 
-  preprocess: preprocess(),
+  preprocess: [
+    imagePreprocessor({
+      inputDir: 'static',
+      outputDir: 'static/g',
+      webp: true,
+      avif: true
+    }),
+    preprocess()
+  ],
 
   kit: {
     adapter: adapter({ precompress: true }),
+    
     prerender: {
       default: true,
-    },
-  },
+    }
+  }
+  
 };
 
 export default config;

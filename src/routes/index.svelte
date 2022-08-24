@@ -7,10 +7,10 @@
     SunIcon,
   } from "svelte-feather-icons";
   import Portrait from "../components/Blobs/BlobPortrait.svelte";
-  import headshot from "../assets/headshot.jpeg";
   import Card from "../components/Card.svelte";
   import resumelink from '../assets/resume.pdf';
   import resumelink_machinereadable from '../assets/resume-machine-readable.pdf';
+  import Image from 'svimg';
 
   const iconProps = { strokeWidth: "2.3", size: "35" };
 </script>
@@ -19,7 +19,7 @@
   <div class="left">
     <div class="Portrait-Container">
       <Portrait innerLayerColor="#E95678" outerLayerColor="#232530">
-        <img src={headshot} alt="" />
+        <Image src="headshot.jpeg" alt="Headshot portrait of Simon" immediate />
       </Portrait>
     </div>
   </div>
