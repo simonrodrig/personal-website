@@ -20,9 +20,7 @@
     <li class="copyright-message"><p>© 2022 Simon Rodriguez</p></li>
     <li>
       <p>
-        This website was written with Svelte and SvelteKit. See the source code <a
-          href="https://github.com/simonrodrig/simonrodrig.github.io">here</a
-        >.
+        This website was written with Svelte and SvelteKit. <a href="https://github.com/simonrodrig/simonrodrig.github.io">See the source code here</a>.
       </p>
     </li>
   </ul>
