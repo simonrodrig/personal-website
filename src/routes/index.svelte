@@ -9,7 +9,8 @@
   import Portrait from "../components/Blobs/BlobPortrait.svelte";
   import headshot from "../assets/headshot.jpeg";
   import Card from "../components/Card.svelte";
-  import resumelink from '../assets/Resume.pdf';
+  import resumelink from '../assets/resume.pdf';
+  import resumelink_machinereadable from '../assets/resume-machine-readable.pdf';
 
   const iconProps = { strokeWidth: "2.3", size: "35" };
 </script>
@@ -66,7 +67,7 @@
     <h3>Résumé</h3>
     <p>
       <a href={resumelink}>Regular</a> •
-      <a href="">Machine-Readable Version</a> •
+      <a href={resumelink_machinereadable}>Machine-Readable Version</a> •
       <a
         href="https://simonrodrig.notion.site/Resume-4c69524a7aef4c379fec3e3ba14236b2"
         >Web Version</a
