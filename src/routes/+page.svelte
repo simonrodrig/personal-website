@@ -79,7 +79,7 @@
       <a href="https://github.com/simonrodrig">GitHub</a> •
       <a href="https://www.instagram.com/simon_rodrig/">Instagram</a>
       •
-      <a href="https://www.linkedin.com/in/simon-rodriguez-6b3a69193/"
+      <a href="https://www.linkedin.com/in/simonrodrig/"
         >LinkedIn</a
       >
     </p>
