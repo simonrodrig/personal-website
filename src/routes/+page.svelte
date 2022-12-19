@@ -71,8 +71,6 @@
     <h3>Links</h3>
     <p>
       <a href="https://github.com/simonrodrig">GitHub</a> •
-      <a href="https://www.instagram.com/simon_rodrig/">Instagram</a>
-      •
       <a href="https://www.linkedin.com/in/simonrodrig/"
         >LinkedIn</a
       >
