@@ -9,7 +9,6 @@
   import Portrait from "../components/Blobs/BlobPortrait.svelte";
   import Card from "../components/Card.svelte";
   import resumelink from '../assets/resume.pdf';
-  import resumelink_machinereadable from '../assets/resume-machine-readable.pdf';
   import Image from 'svimg';
 
   const iconProps = { strokeWidth: "2.3", size: "35" };
@@ -66,12 +65,7 @@
     <h2 id="say-hello">Say Hello!</h2>
     <h3>Résumé</h3>
     <p>
-      <a href={resumelink}>Regular</a> •
-      <a href={resumelink_machinereadable}>Machine-Readable Version</a> •
-      <a
-        href="https://simonrodrig.notion.site/Resume-4c69524a7aef4c379fec3e3ba14236b2"
-        >Web Version</a
-      >
+      <a href={resumelink}>Regular</a>
     </p>
 
     <h3>Links</h3>
