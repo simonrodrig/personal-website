@@ -27,8 +27,12 @@
 
     min-width: 325px;
 
-
     display: inline-flex;
+
+    transition: filter 150ms ease-out;
+    &:is(:hover, :active) {
+      filter: base.$filter-shadow;
+    }
     
     .icon-box {
       aspect-ratio: 1;
