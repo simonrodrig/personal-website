@@ -1,81 +1,59 @@
 <script lang="ts">
-  import { GithubIcon, InstagramIcon, LinkedinIcon } from 'svelte-feather-icons';
+  const size = '32';
 </script>
 
-<footer class="Footer">
-  <ul>
-    <li class="links">
-      <nav>
-        <a aria-label="GitHub" href="https://github.com/simonrodrig"><GithubIcon /></a>
-        <a aria-label="LinkedIn" href="https://www.linkedin.com/in/simon-rodriguez-6b3a69193/"
-          ><LinkedinIcon /></a
-        >
-      </nav>
-    </li>
-    <li class="copyright-message"><p>© 2022 Simon Rodriguez</p></li>
-    <li>
-      <p>
-        This website was written with Svelte and SvelteKit. <a
-          href="https://github.com/simonrodrig/simonrodrig.github.io">See the source code here</a
-        >.
-      </p>
-    </li>
-  </ul>
+<footer>
+  <nav>
+    <a aria-label="GitHub" href="https://github.com/simonrodrig">
+      <iconify-icon icon="ri:github-fill" height={size} width={size} />
+    </a>
+    <a aria-label="LinkedIn" href="https://www.linkedin.com/in/simon-rodriguez-6b3a69193/">
+      <iconify-icon icon="ri:linkedin-fill" height={size} width={size} />
+    </a>
+  </nav>
+  <p>© 2022 Simon Rodriguez</p>
+  <p>
+    This website was written with Svelte and SvelteKit. <a
+      href="https://github.com/simonrodrig/simonrodrig.github.io">See the source code here</a
+    >.
+  </p>
 </footer>
 
 <style lang="scss">
   @use '../../styles/vars';
 
-  // FIXME: Why does this need to be set?
-  :global(body) {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-
-  .Footer {
-    --height: 10em;
-    min-height: var(--height);
-
+  footer {
     background-color: vars.$clr-background-light;
     border-top: 3px solid vars.$clr-accent;
+    padding: 1.5em 0;
     margin-top: 3em;
 
-    /* Top-level list */
-    > ul {
-      list-style: none;
-
-      display: flex;
-      flex-flow: column;
-      gap: 1em;
-      justify-content: center;
-      align-items: center;
-
-      height: var(--height);
+    // All text children have larger line height
+    > * {
+      line-height: 2;
+      text-align: center;
     }
 
     /* Icons */
-    .links > nav {
-      display: flex;
-      gap: 1em;
-      justify-content: center;
-      align-items: center;
+    nav {
+      a {
+        margin: 0 0.2em;
 
-      > a :global(svg) {
-        color: vars.$clr-text-primary;
+        iconify-icon {
+          color: vars.$clr-text-primary;
+        }
       }
     }
 
     p {
-      font-size: 1rem;
       color: vars.$clr-text-primary;
-      padding: 0 2em;
-      text-align: center;
+      font-size: 1rem;
     }
   }
 
   @media (max-width: vars.$size-phone) {
-    .Footer {
+    footer {
+      // Add space for the nav button that appears at small screen sizes
       padding-bottom: 4em;
     }
   }
