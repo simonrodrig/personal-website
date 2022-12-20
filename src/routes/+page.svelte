@@ -5,6 +5,15 @@
   import Image from "svimg";
 </script>
 
+<svelte:head>
+  <title>Simon Rodriguez | Front-end Software Developer</title>
+
+  <meta
+    name="description"
+    content="Simon is a developer with an interest in frontend web development, UI/UX design, and open source."
+  >
+</svelte:head>
+
 <section id="home" class="hero">
   <div class="left">
     <div class="Portrait-Container">
