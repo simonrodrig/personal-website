@@ -23,8 +23,9 @@
     border-radius: base.$border-radius-sm;
     /* filter: base.$filter-shadow; */
     margin-right: 0.5em;
+    margin-bottom: 0.5em;
 
-    width: 350px;
+    min-width: 325px;
 
 
     display: inline-flex;

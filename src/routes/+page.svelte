@@ -1,17 +1,8 @@
 <script lang="ts">
-  import {
-    ArrowRightIcon,
-    CalendarIcon,
-    GlobeIcon,
-    LinkIcon,
-    SunIcon,
-  } from "svelte-feather-icons";
   import Portrait from "../components/Blobs/BlobPortrait.svelte";
   import IconCardLink from "../components/IconCardLink.svelte";
   import Card from "../components/Card.svelte";
-  import Image from 'svimg';
-
-  const iconProps = { strokeWidth: "2.3", size: "35" };
+  import Image from "svimg";
 </script>
 
 <section id="home" class="hero">
@@ -24,14 +15,14 @@
   </div>
 
   <div class="right">
-    <h1>Simon<br /> Rodriguez</h1>
+    <h1>Simon<br />Rodriguez</h1>
     <p class="heading--secondary">
       Developer with an interest in frontend web development, UI/UX design, and
       open source.
     </p>
     <a class="cta" href="#say-hello">
       <p class="text--link">Say Hello</p>
-      <ArrowRightIcon />
+      <iconify-icon icon="fe:arrow-right" width="24" />
     </a>
   </div>
 </section>
@@ -45,6 +36,7 @@
       playing video games!
     </p>
   </Card>
+
   <Card icon="fe:calendar">
     <h2>What I'm up to</h2>
     <p>
@@ -53,6 +45,7 @@
       >, or somewhere in the <b>Massachusetts area</b>.
     </p>
   </Card>
+
   <Card icon="fe:link">
     <h2 id="contact">Contact</h2>
     <p>
@@ -61,26 +54,29 @@
       >
     </p>
   </Card>
+
   <Card icon="fe:sunny-o">
     <h2 id="say-hello">Say Hello!</h2>
-    <h3>Résumé</h3>
 
-    <h3>Links</h3>
-    <p>
-      <a href="https://github.com/simonrodrig">GitHub</a> •
-      <a href="https://www.linkedin.com/in/simonrodrig/"
-        >LinkedIn</a
-      >
-    </p>
+    <h3>Email</h3>
+    <a id="email" href="mailto:simon@rodrig.dev">simon@rodrig.dev</a>
+
+    <h3>Job Materials</h3>
     <IconCardLink href="/resume.pdf" iconName="carbon:document-pdf">
       <p slot="link-name">Resume</p>
       <p slot="link-desc">View my experience and work</p>
     </IconCardLink>
-    <IconCardLink href="https://github.com/simonrodrig/" iconName="ri:github-fill">
+    <IconCardLink
+      href="https://github.com/simonrodrig/"
+      iconName="ri:github-fill"
+    >
       <p slot="link-name">GitHub</p>
       <p slot="link-desc">View my source code</p>
     </IconCardLink>
-    <IconCardLink href="https://linkedin.com/in/simonrodrig/" iconName="ri:linkedin-fill">
+    <IconCardLink
+      href="https://linkedin.com/in/simonrodrig/"
+      iconName="ri:linkedin-fill"
+    >
       <p slot="link-name">LinkedIn</p>
       <p slot="link-desc">Connect with me</p>
     </IconCardLink>
@@ -110,7 +106,7 @@
     }
 
     .cta {
-      display: flex;
+      display: inline-flex;
       flex-flow: row;
       align-items: center;
       gap: 0.3em;
@@ -175,18 +171,20 @@
       line-height: 2;
     }
 
-    h3 {
-      margin: 0.3em 0;
-    }
-
     p {
       color: base.$clr-text-secondary;
-      line-height: 1.7;
+      line-height: 1.6;
 
       em {
         color: base.$clr-accent;
         font-style: normal;
       }
+    }
+
+    #email {
+      font-size: 1.2rem;
+      display: inline-block;
+      margin-bottom: 1em;
     }
   }
 
