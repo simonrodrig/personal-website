@@ -1,8 +1,8 @@
 <script lang="ts">
-  import Portrait from "$lib/blobs/BlobPortrait.svelte";
-  import IconCardLink from "$lib/IconCardLink.svelte";
-  import Card from "$lib/Card.svelte";
-  import Image from "svimg";
+  import Portrait from '$lib/blobs/BlobPortrait.svelte';
+  import IconCardLink from '$lib/IconCardLink.svelte';
+  import Card from '$lib/Card.svelte';
+  import Image from 'svimg';
 </script>
 
 <svelte:head>
@@ -11,7 +11,7 @@
   <meta
     name="description"
     content="Simon is a developer with an interest in frontend web development, UI/UX design, and open source."
-  >
+  />
 </svelte:head>
 
 <section id="home" class="hero">
@@ -26,8 +26,7 @@
   <div class="right">
     <h1>Simon<br />Rodriguez</h1>
     <p class="heading--secondary">
-      Developer with an interest in frontend web development, UI/UX design, and
-      open source.
+      Developer with an interest in frontend web development, UI/UX design, and open source.
     </p>
     <a class="cta" href="#say-hello">
       <p class="text--link">Say Hello</p>
@@ -40,18 +39,16 @@
   <Card icon="fe:globe">
     <h2 id="about">About Me</h2>
     <p>
-      Hey there! I'm a recent college graduate with a passion for tech. When I'm
-      not working, you can find me cooking, spending time with my cats, or
-      playing video games!
+      Hey there! I'm a recent college graduate with a passion for tech. When I'm not working, you
+      can find me cooking, spending time with my cats, or playing video games!
     </p>
   </Card>
 
   <Card icon="fe:calendar">
     <h2>What I'm up to</h2>
     <p>
-      Currently I'm looking for work! I'm available to work <b
-        >remote in the US</b
-      >, or somewhere in the <b>Massachusetts area</b>.
+      Currently I'm looking for work! I'm available to work <b>remote in the US</b>, or somewhere in
+      the <b>Massachusetts area</b>.
     </p>
   </Card>
 
@@ -75,17 +72,11 @@
       <p slot="link-name">Resume</p>
       <p slot="link-desc">View my experience and work</p>
     </IconCardLink>
-    <IconCardLink
-      href="https://github.com/simonrodrig/"
-      iconName="ri:github-fill"
-    >
+    <IconCardLink href="https://github.com/simonrodrig/" iconName="ri:github-fill">
       <p slot="link-name">GitHub</p>
       <p slot="link-desc">View my source code</p>
     </IconCardLink>
-    <IconCardLink
-      href="https://linkedin.com/in/simonrodrig/"
-      iconName="ri:linkedin-fill"
-    >
+    <IconCardLink href="https://linkedin.com/in/simonrodrig/" iconName="ri:linkedin-fill">
       <p slot="link-name">LinkedIn</p>
       <p slot="link-desc">Connect with me</p>
     </IconCardLink>
@@ -93,7 +84,7 @@
 </section>
 
 <style lang="scss">
-  @use "../styles/base";
+  @use '../styles/base';
 
   .hero {
     min-height: 75%;
@@ -151,9 +142,9 @@
     margin: auto;
 
     grid-template-areas:
-      "one two three"
-      "four four four"
-      "four four four";
+      'one two three'
+      'four four four'
+      'four four four';
 
     :global(div):nth-child(1) {
       grid-area: one;
@@ -229,10 +220,10 @@
   @media (max-width: base.$size-phone) {
     .quick-facts {
       grid-template-areas:
-        "one"
-        "two"
-        "three"
-        "four";
+        'one'
+        'two'
+        'three'
+        'four';
 
       :global():nth-child(4) {
         min-height: unset;

@@ -1,9 +1,5 @@
 <script lang="ts">
-  import {
-    GithubIcon,
-    InstagramIcon,
-    LinkedinIcon,
-  } from "svelte-feather-icons";
+  import { GithubIcon, InstagramIcon, LinkedinIcon } from 'svelte-feather-icons';
 </script>
 
 <footer class="Footer">
@@ -20,8 +16,7 @@
     <li>
       <p>
         This website was written with Svelte and SvelteKit. <a
-          href="https://github.com/simonrodrig/simonrodrig.github.io"
-          >See the source code here</a
+          href="https://github.com/simonrodrig/simonrodrig.github.io">See the source code here</a
         >.
       </p>
     </li>
@@ -29,7 +24,7 @@
 </footer>
 
 <style lang="scss">
-  @use "../../styles/base";
+  @use '../../styles/base';
 
   // FIXME: Why does this need to be set?
   :global(body) {

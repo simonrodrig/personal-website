@@ -2,8 +2,8 @@
   export let icon: string;
 </script>
 
-<div class="Card" >
-  <iconify-icon height="40" icon={icon} />
+<div class="Card">
+  <iconify-icon height="40" {icon} />
   <slot />
 </div>
 
@@ -11,16 +11,16 @@
   @use '../styles/base';
 
   .Card {
-   padding: 2em;
-   background-color: base.$clr-background-light;
-   border-radius: base.$border-radius-lg;
-   filter: drop-shadow(0px 0px 16px base.$clr-background-dark);
+    padding: 2em;
+    background-color: base.$clr-background-light;
+    border-radius: base.$border-radius-lg;
+    filter: drop-shadow(0px 0px 16px base.$clr-background-dark);
 
     iconify-icon {
-       color: base.$clr-text-primary;
+      color: base.$clr-text-primary;
     }
   }
-  
+
   .Card:focus-visible {
     outline: 4px solid base.$clr-accent;
   }

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Blob from "./Blob.svelte";
+  import Blob from './Blob.svelte';
 </script>
 
 <div class="blobs">
@@ -13,7 +13,7 @@
 </div>
 
 <style lang="scss">
-  @use "../../styles/base";
+  @use '../../styles/base';
 
   .blobs {
     position: absolute;
@@ -42,4 +42,3 @@
     width: clamp(70vw, 10vw + 1rem, 80vw);
   }
 </style>
-

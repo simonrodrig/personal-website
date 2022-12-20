@@ -1,13 +1,13 @@
 <script lang="ts">
-  import { ArrowDownIcon, MenuIcon } from "svelte-feather-icons";
-  import { cubicOut } from "svelte/easing";
-  import { tweened } from "svelte/motion";
+  import { ArrowDownIcon, MenuIcon } from 'svelte-feather-icons';
+  import { cubicOut } from 'svelte/easing';
+  import { tweened } from 'svelte/motion';
 
   let isMobileViewOpen = false;
   let navHeight = tweened(0, {
     duration: 250,
     easing: cubicOut,
-    delay: 0,
+    delay: 0
   });
 
   $: isMobileViewOpen ? navHeight.set(215) : navHeight.set(0);
@@ -35,11 +35,7 @@
   {/if}
 </button>
 
-<nav
-  bind:this={navRef}
-  class="NavBar"
-  style:transform={`translateY(${-$navHeight}px)`}
->
+<nav bind:this={navRef} class="NavBar" style:transform={`translateY(${-$navHeight}px)`}>
   <div class="left">
     <a class="text--logo" href="/" tabindex="0">rodrig.dev</a>
   </div>
@@ -54,7 +50,7 @@
 </nav>
 
 <style lang="scss">
-  @use "../../styles/base";
+  @use '../../styles/base';
 
   a:focus {
     outline: 2px solid base.$clr-accent;

@@ -1,5 +1,5 @@
-import type { LayoutLoad } from "./$types";
-import { dev } from '$app/environment'
+import type { LayoutLoad } from './$types';
+import { dev } from '$app/environment';
 
 // Serve the page as a static asset
 export const prerender = true;
@@ -10,59 +10,59 @@ export const prerender = true;
 
 type MetaTag = { name: string; content: string };
 
-const theme = "#1c1e26";
+const theme = '#1c1e26';
 const seo: MetaTag[] = [
   {
-    name: "description",
+    name: 'description',
     content:
-      "Simon is a developer with an interest in frontend web development, UI/UX design, and open source.",
+      'Simon is a developer with an interest in frontend web development, UI/UX design, and open source.'
   },
   {
-    name: "og:title",
-    content: "Simon Rodriguez | Front-end Web Developer",
+    name: 'og:title',
+    content: 'Simon Rodriguez | Front-end Web Developer'
   },
   {
-    name: "og:description",
+    name: 'og:description',
     content:
-      "Simon is a developer with an interest in frontend web development, UI/UX design, and open source.",
+      'Simon is a developer with an interest in frontend web development, UI/UX design, and open source.'
   },
   {
-    name: "og:site_name",
-    content: "rodrig.dev",
+    name: 'og:site_name',
+    content: 'rodrig.dev'
   },
   {
-    name: "og:type",
-    content: "website",
+    name: 'og:type',
+    content: 'website'
   },
   {
-    name: "og:image",
-    content: "https://www.rodrig.dev/twitter-card-image.png",
+    name: 'og:image',
+    content: 'https://www.rodrig.dev/twitter-card-image.png'
   },
   {
-    name: "og:url",
-    content: "https://www.rodrig.dev/",
+    name: 'og:url',
+    content: 'https://www.rodrig.dev/'
   },
   {
-    name: "twitter:card",
-    content: "summary_large_image",
+    name: 'twitter:card',
+    content: 'summary_large_image'
   },
   {
-    name: "twitter:title",
-    content: "Simon Rodriguez",
+    name: 'twitter:title',
+    content: 'Simon Rodriguez'
   },
   {
-    name: "twitter:description",
+    name: 'twitter:description',
     content:
-      "Simon is a developer with an interest in frontend web development, UI/UX design, and open source.",
+      'Simon is a developer with an interest in frontend web development, UI/UX design, and open source.'
   },
   {
-    name: "twitter:image",
-    content: "https://www.rodrig.dev/twitter-card-image.png",
+    name: 'twitter:image',
+    content: 'https://www.rodrig.dev/twitter-card-image.png'
   },
   {
-    name: "twitter:image:alt",
-    content: "Image of Simon along with a short introduction",
-  },
+    name: 'twitter:image:alt',
+    content: 'Image of Simon along with a short introduction'
+  }
 ];
 
 export const load: LayoutLoad = () => {

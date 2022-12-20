@@ -10,7 +10,6 @@
   <div class="text-body">
     <span class="name"><slot name="link-name" /></span>
     <span class="description"><slot name="link-desc" /></span>
-  
   </div>
 </a>
 
@@ -19,7 +18,7 @@
 
   .IconCardLink {
     background-color: base.$clr-background-dark;
-    border: 1px solid #16181F;
+    border: 1px solid #16181f;
     border-radius: base.$border-radius-sm;
     /* filter: base.$filter-shadow; */
     margin-right: 0.5em;
@@ -33,7 +32,7 @@
     &:is(:hover, :active) {
       filter: base.$filter-shadow;
     }
-    
+
     .icon-box {
       aspect-ratio: 1;
       min-width: 80px;
