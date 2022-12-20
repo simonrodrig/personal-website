@@ -54,7 +54,7 @@
 </nav>
 
 <style lang="scss">
-  @use "../styles/base";
+  @use "../../styles/base";
 
   a:focus {
     outline: 2px solid base.$clr-accent;
