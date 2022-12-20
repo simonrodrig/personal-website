@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { ArrowDownIcon, MenuIcon } from 'svelte-feather-icons';
   import { cubicOut } from 'svelte/easing';
   import { tweened } from 'svelte/motion';
 
@@ -29,95 +28,88 @@
   style:transform={`translateY(${-$navHeight}px)`}
 >
   {#if isMobileViewOpen}
-    <ArrowDownIcon size="25" />
+    <iconify-icon icon="fe:arrow-down" height="25" width="25" />
   {:else}
-    <MenuIcon size="25" />
+    <iconify-icon icon="ic:round-menu" height="25" width="25" />
   {/if}
 </button>
 
-<nav bind:this={navRef} class="NavBar" style:transform={`translateY(${-$navHeight}px)`}>
+<nav bind:this={navRef} style:transform={`translateY(${-$navHeight}px)`}>
   <div class="left">
     <a class="text--logo" href="/" tabindex="0">rodrig.dev</a>
   </div>
 
   <div class="right">
-    <ul>
-      <li><a href="#home" tabindex="0">Home</a></li>
-      <li><a href="#about" tabindex="0">About</a></li>
-      <li><a href="#contact" tabindex="0">Contact</a></li>
-    </ul>
+    <a href="#home" tabindex="0">Home</a>
+    <a href="#about" tabindex="0">About</a>
+    <a href="#contact" tabindex="0">Contact</a>
   </div>
 </nav>
 
 <style lang="scss">
   @use '../../styles/vars';
 
-  a:focus {
-    outline: 2px solid vars.$clr-accent;
-  }
-
   .NavOpen {
+    // Hidden by default
     display: none;
   }
 
-  .NavBar {
+  nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     padding: 1.5em 4em;
 
-    ul {
+    .right {
       display: flex;
       flex-flow: row;
       gap: 2em;
 
-      li {
-        list-style: none;
-        > a {
-          color: vars.$clr-text-primary;
-          font-weight: 500;
-        }
+      a {
+        color: vars.$clr-text-primary;
+        font-weight: 500;
       }
+
     }
   }
 
   @media (max-width: vars.$size-phone) {
     .NavOpen {
       position: fixed;
-      display: inline-block;
       bottom: 0;
       right: 0;
-      margin: 1em;
-      border: none;
-      box-sizing: border-box;
-      z-index: 10;
 
-      padding: 1em;
-
+      display: inline-block;
       height: 3rem;
       width: 3rem;
+      margin: 1em;
+      padding: 1em;
+     
+      z-index: 10;
 
       background-color: vars.$clr-background-light;
+      border: none;
       filter: vars.$filter-shadow;
       border-radius: vars.$border-radius-sm;
 
-      :global(svg) {
-        color: vars.$clr-text-primary;
+      transition: outline 300ms ease-out;
+
+      iconify-icon {
+        color: vars.$clr-text-primary;        
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
       }
-
-      transition: outline 300ms ease-out;
     }
 
     .NavOpen:focus-visible {
       outline: 2px solid vars.$clr-accent;
+      outline-offset: 2px;
     }
 
-    .NavBar {
+    nav {
       position: fixed;
       bottom: -215px;
       left: 0;
@@ -130,7 +122,8 @@
       padding: 1em 0;
       gap: 0.5em;
       border-radius: vars.$border-radius-sm vars.$border-radius-sm 0 0;
-      .right > ul {
+
+      .right {
         flex-flow: column;
         align-items: center;
       }
