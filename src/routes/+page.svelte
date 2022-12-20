@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Portrait from "$lib/myblobs/BlobPortrait.svelte";
+  import Portrait from "$lib/blobs/BlobPortrait.svelte";
   import IconCardLink from "$lib/IconCardLink.svelte";
   import Card from "$lib/Card.svelte";
   import Image from "svimg";
