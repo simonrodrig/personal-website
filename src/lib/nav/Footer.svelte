@@ -24,7 +24,7 @@
 </footer>
 
 <style lang="scss">
-  @use '../../styles/base';
+  @use '../../styles/vars';
 
   // FIXME: Why does this need to be set?
   :global(body) {
@@ -37,8 +37,8 @@
     --height: 10em;
     min-height: var(--height);
 
-    background-color: base.$clr-background-light;
-    border-top: 3px solid base.$clr-accent;
+    background-color: vars.$clr-background-light;
+    border-top: 3px solid vars.$clr-accent;
     margin-top: 3em;
 
     /* Top-level list */
@@ -62,19 +62,19 @@
       align-items: center;
 
       > a :global(svg) {
-        color: base.$clr-text-primary;
+        color: vars.$clr-text-primary;
       }
     }
 
     p {
       font-size: 1rem;
-      color: base.$clr-text-primary;
+      color: vars.$clr-text-primary;
       padding: 0 2em;
       text-align: center;
     }
   }
 
-  @media (max-width: base.$size-phone) {
+  @media (max-width: vars.$size-phone) {
     .Footer {
       padding-bottom: 4em;
     }

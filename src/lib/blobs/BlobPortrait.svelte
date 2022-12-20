@@ -20,7 +20,7 @@
 </div>
 
 <style lang="scss">
-  @use '../../styles/base';
+  @use '../../styles/vars';
 
   .container {
     position: relative;
@@ -35,7 +35,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    filter: base.$filter-shadow;
+    filter: vars.$filter-shadow;
   }
 
   .background-blob {

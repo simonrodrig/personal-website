@@ -14,13 +14,13 @@
 </a>
 
 <style lang="scss">
-  @use '../styles/base';
+  @use '../styles/vars';
 
   .IconCardLink {
-    background-color: base.$clr-background-dark;
+    background-color: vars.$clr-background-dark;
     border: 1px solid #16181f;
-    border-radius: base.$border-radius-sm;
-    /* filter: base.$filter-shadow; */
+    border-radius: vars.$border-radius-sm;
+    /* filter: vars.$filter-shadow; */
     margin-right: 0.5em;
     margin-bottom: 0.5em;
 
@@ -30,22 +30,22 @@
 
     transition: filter 150ms ease-out;
     &:is(:hover, :active) {
-      filter: base.$filter-shadow;
+      filter: vars.$filter-shadow;
     }
 
     .icon-box {
       aspect-ratio: 1;
       min-width: 80px;
       padding: 1em;
-      background-color: base.$clr-background-light;
-      border-top-left-radius: base.$border-radius-sm;
-      border-bottom-left-radius: base.$border-radius-sm;
+      background-color: vars.$clr-background-light;
+      border-top-left-radius: vars.$border-radius-sm;
+      border-bottom-left-radius: vars.$border-radius-sm;
 
       display: grid;
       place-items: center;
 
       iconify-icon {
-        color: base.$clr-text-primary;
+        color: vars.$clr-text-primary;
       }
     }
 
@@ -54,9 +54,9 @@
       --line-height: 1.5;
 
       .name > :global(*) {
-        font-family: base.$font-primary;
+        font-family: vars.$font-primary;
         font-weight: 600;
-        color: base.$clr-text-primary;
+        color: vars.$clr-text-primary;
         font-size: 1.2rem;
         line-height: var(--line-height);
       }

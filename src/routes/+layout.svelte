@@ -6,6 +6,9 @@
   import NavBar from '$lib/nav/NavBar.svelte';
   import BlobBackground from '$lib/blobs/BlobBackground.svelte';
 
+  // Load the base stylesheet
+  import '../styles/_base.scss';
+
   // Load our icons onto the page
   import 'iconify-icon';
 </script>

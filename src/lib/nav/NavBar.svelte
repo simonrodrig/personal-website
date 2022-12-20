@@ -50,10 +50,10 @@
 </nav>
 
 <style lang="scss">
-  @use '../../styles/base';
+  @use '../../styles/vars';
 
   a:focus {
-    outline: 2px solid base.$clr-accent;
+    outline: 2px solid vars.$clr-accent;
   }
 
   .NavOpen {
@@ -75,14 +75,14 @@
       li {
         list-style: none;
         > a {
-          color: base.$clr-text-primary;
+          color: vars.$clr-text-primary;
           font-weight: 500;
         }
       }
     }
   }
 
-  @media (max-width: base.$size-phone) {
+  @media (max-width: vars.$size-phone) {
     .NavOpen {
       position: fixed;
       display: inline-block;
@@ -98,12 +98,12 @@
       height: 3rem;
       width: 3rem;
 
-      background-color: base.$clr-background-light;
-      filter: base.$filter-shadow;
-      border-radius: base.$border-radius-sm;
+      background-color: vars.$clr-background-light;
+      filter: vars.$filter-shadow;
+      border-radius: vars.$border-radius-sm;
 
       :global(svg) {
-        color: base.$clr-text-primary;
+        color: vars.$clr-text-primary;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -114,7 +114,7 @@
     }
 
     .NavOpen:focus-visible {
-      outline: 2px solid base.$clr-accent;
+      outline: 2px solid vars.$clr-accent;
     }
 
     .NavBar {
@@ -125,11 +125,11 @@
       z-index: 10;
 
       flex-flow: column;
-      background-color: base.$clr-background-light;
-      filter: base.$filter-shadow;
+      background-color: vars.$clr-background-light;
+      filter: vars.$filter-shadow;
       padding: 1em 0;
       gap: 0.5em;
-      border-radius: base.$border-radius-sm base.$border-radius-sm 0 0;
+      border-radius: vars.$border-radius-sm vars.$border-radius-sm 0 0;
       .right > ul {
         flex-flow: column;
         align-items: center;

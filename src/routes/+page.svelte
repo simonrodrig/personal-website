@@ -84,7 +84,7 @@
 </section>
 
 <style lang="scss">
-  @use '../styles/base';
+  @use '../styles/vars';
 
   .hero {
     min-height: 75%;
@@ -165,18 +165,18 @@
     }
 
     h2 {
-      font-family: base.$font-primary;
+      font-family: vars.$font-primary;
       font-weight: 600;
       font-size: 1.5rem;
       line-height: 2;
     }
 
     p {
-      color: base.$clr-text-secondary;
+      color: vars.$clr-text-secondary;
       line-height: 1.6;
 
       em {
-        color: base.$clr-accent;
+        color: vars.$clr-accent;
         font-style: normal;
       }
     }
@@ -188,7 +188,7 @@
     }
   }
 
-  @media (max-width: base.$size-tablet) {
+  @media (max-width: vars.$size-tablet) {
     .hero {
       flex-flow: column;
       margin: 2em 0;
@@ -217,7 +217,7 @@
     }
   }
 
-  @media (max-width: base.$size-phone) {
+  @media (max-width: vars.$size-phone) {
     .quick-facts {
       grid-template-areas:
         'one'

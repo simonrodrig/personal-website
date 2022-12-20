@@ -8,27 +8,27 @@
 </div>
 
 <style lang="scss">
-  @use '../styles/base';
+  @use '../styles/vars';
 
   .Card {
     padding: 2em;
-    background-color: base.$clr-background-light;
-    border-radius: base.$border-radius-lg;
-    filter: drop-shadow(0px 0px 16px base.$clr-background-dark);
+    background-color: vars.$clr-background-light;
+    border-radius: vars.$border-radius-lg;
+    filter: drop-shadow(0px 0px 16px vars.$clr-background-dark);
 
     iconify-icon {
-      color: base.$clr-text-primary;
+      color: vars.$clr-text-primary;
     }
   }
 
   .Card:focus-visible {
-    outline: 4px solid base.$clr-accent;
+    outline: 4px solid vars.$clr-accent;
   }
 
-  @media (max-width: base.$size-tablet) {
+  @media (max-width: vars.$size-tablet) {
     .Card {
       padding: 1em;
-      border-radius: base.$border-radius-sm;
+      border-radius: vars.$border-radius-sm;
     }
   }
 </style>

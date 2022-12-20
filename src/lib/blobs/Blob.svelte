@@ -69,12 +69,12 @@
 </div>
 
 <style lang="scss">
-  @use '../../styles/base';
+  @use '../../styles/vars';
 
   .Blob {
     svg {
       path {
-        --color: #{base.$clr-background-light};
+        --color: #{vars.$clr-background-light};
         fill: var(--color);
       }
     }
