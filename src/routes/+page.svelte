@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Portrait from "../components/Blobs/BlobPortrait.svelte";
+  import Portrait from "../components/blobs/BlobPortrait.svelte";
   import IconCardLink from "../components/IconCardLink.svelte";
   import Card from "../components/Card.svelte";
   import Image from "svimg";
