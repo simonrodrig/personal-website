@@ -37,15 +37,15 @@
 </section>
 
 <section class="quick-facts">
-  <Card icon={GlobeIcon} props={iconProps}>
+  <Card icon="fe:globe">
     <h2 id="about">About Me</h2>
     <p>
-      Hey there! I’m a recent college graduate with a passion for tech. When I’m
+      Hey there! I'm a recent college graduate with a passion for tech. When I'm
       not working, you can find me cooking, spending time with my cats, or
       playing video games!
     </p>
   </Card>
-  <Card icon={CalendarIcon} props={iconProps}>
+  <Card icon="fe:calendar">
     <h2>What I'm up to</h2>
     <p>
       Currently I'm looking for work! I'm available to work <b
@@ -53,15 +53,15 @@
       >, or somewhere in the <b>Massachusetts area</b>.
     </p>
   </Card>
-  <Card icon={LinkIcon} props={iconProps}>
+  <Card icon="fe:link">
     <h2 id="contact">Contact</h2>
     <p>
-      If you’re interested in working with me, please reach me through <em
+      If you're interested in working with me, please reach me through <em
         >simon[at]rodrig[dot]dev.</em
       >
     </p>
   </Card>
-  <Card icon={SunIcon} props={iconProps}>
+  <Card icon="fe:sunny-o">
     <h2 id="say-hello">Say Hello!</h2>
     <h3>Résumé</h3>
 

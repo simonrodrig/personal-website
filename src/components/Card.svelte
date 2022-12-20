@@ -1,14 +1,9 @@
 <script lang="ts">
-  import type { SvelteComponentTyped } from 'svelte';
-  type FeatherIconProps = {size?: string, strokeWidth?: number, class?: string}
-  type FeatherIcon = SvelteComponentTyped<FeatherIconProps>
-  
-  export let icon: FeatherIcon;
-  export let props: FeatherIconProps = {};
+  export let icon: string;
 </script>
 
-<div class="Card" tabindex="0">
-  <svelte:component this={icon} {...props} />
+<div class="Card" >
+  <iconify-icon height="40" icon={icon} />
   <slot />
 </div>
 
@@ -21,7 +16,7 @@
    border-radius: base.$border-radius-lg;
    filter: drop-shadow(0px 0px 16px base.$clr-background-dark);
 
-    :global(svg) {
+    iconify-icon {
        color: base.$clr-text-primary;
     }
   }
