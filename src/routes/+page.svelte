@@ -202,6 +202,7 @@
         text-align: center;
       }
       .cta {
+        display: flex;
         justify-content: center;
       }
     }
