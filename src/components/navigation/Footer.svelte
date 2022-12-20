@@ -29,7 +29,7 @@
 </footer>
 
 <style lang="scss">
-  @use "../styles/base";
+  @use "../../styles/base";
 
   // FIXME: Why does this need to be set?
   :global(body) {
