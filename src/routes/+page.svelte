@@ -7,8 +7,8 @@
     SunIcon,
   } from "svelte-feather-icons";
   import Portrait from "../components/Blobs/BlobPortrait.svelte";
+  import IconCardLink from "../components/IconCardLink.svelte";
   import Card from "../components/Card.svelte";
-  import resumelink from '../assets/resume.pdf';
   import Image from 'svimg';
 
   const iconProps = { strokeWidth: "2.3", size: "35" };
@@ -64,9 +64,6 @@
   <Card icon={SunIcon} props={iconProps}>
     <h2 id="say-hello">Say Hello!</h2>
     <h3>Résumé</h3>
-    <p>
-      <a href={resumelink}>Regular</a>
-    </p>
 
     <h3>Links</h3>
     <p>
@@ -75,6 +72,18 @@
         >LinkedIn</a
       >
     </p>
+    <IconCardLink href="/resume.pdf" iconName="carbon:document-pdf">
+      <p slot="link-name">Resume</p>
+      <p slot="link-desc">View my experience and work</p>
+    </IconCardLink>
+    <IconCardLink href="https://github.com/simonrodrig/" iconName="ri:github-fill">
+      <p slot="link-name">GitHub</p>
+      <p slot="link-desc">View my source code</p>
+    </IconCardLink>
+    <IconCardLink href="https://linkedin.com/in/simonrodrig/" iconName="ri:linkedin-fill">
+      <p slot="link-name">LinkedIn</p>
+      <p slot="link-desc">Connect with me</p>
+    </IconCardLink>
   </Card>
 </section>
 

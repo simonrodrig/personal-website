@@ -11,7 +11,6 @@
     <li class="links">
       <nav>
         <a aria-label="GitHub" href="https://github.com/simonrodrig"><GithubIcon /></a>
-        <a aria-label="Instagram" href="https://www.instagram.com/simon_rodrig/"><InstagramIcon /></a>
         <a aria-label="LinkedIn" href="https://www.linkedin.com/in/simon-rodriguez-6b3a69193/"
           ><LinkedinIcon /></a
         >
