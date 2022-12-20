@@ -21,10 +21,6 @@
     }
   }
 
-  .Card:focus-visible {
-    outline: 4px solid vars.$clr-accent;
-  }
-
   @media (max-width: vars.$size-tablet) {
     .Card {
       padding: 1em;
