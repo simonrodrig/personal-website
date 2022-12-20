@@ -6,7 +6,7 @@ export const prerender = true;
 
 // Disable JavaScript for the base layout, keep it in the dev environment though
 // for hot-module reloading (HMR)
-export const csr = dev;
+// export const csr = dev;
 
 type MetaTag = { name: string; content: string };
 
