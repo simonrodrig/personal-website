@@ -25,7 +25,7 @@
 
   <div class="right">
     <h1>Simon<br />Rodriguez</h1>
-    <p class="heading--secondary">
+    <p class="heading--subtitle">
       Developer with an interest in frontend web development, UI/UX design, and open source.
     </p>
     <a class="cta" href="#say-hello">
@@ -94,12 +94,6 @@
     justify-content: center;
     align-items: center;
 
-    .right {
-      .heading--secondary {
-        margin: 1em 0;
-      }
-    }
-
     .right,
     .left {
       max-width: 40em;
@@ -164,23 +158,6 @@
       min-height: 20em;
     }
 
-    h2 {
-      font-family: vars.$font-primary;
-      font-weight: 600;
-      font-size: 1.5rem;
-      line-height: 2;
-    }
-
-    p {
-      color: vars.$clr-text-secondary;
-      line-height: 1.6;
-
-      em {
-        color: vars.$clr-accent;
-        font-style: normal;
-      }
-    }
-
     #email {
       font-size: 1.2rem;
       display: inline-block;
@@ -207,14 +184,6 @@
       }
     }
 
-    .quick-facts {
-      h2 {
-        font-size: 1.25rem;
-      }
-      p {
-        font-size: 1rem;
-      }
-    }
   }
 
   @media (max-width: vars.$size-phone) {

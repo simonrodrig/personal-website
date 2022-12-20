@@ -21,11 +21,20 @@ h1,
 
 h2,
 .heading--secondary {
+  font-family: vars.$font-primary;
+  font-weight: 600;
+  font-size: clamp(1.25rem, 8vw + 0.3rem, 1.5rem);
+  line-height: 2;
+  color: vars.$clr-text-primary;
+}
+
+.heading--subtitle {
   font-family: vars.$font-secondary;
   font-size: clamp(1rem, 8vw + 0.3rem, 1.5rem);
   font-weight: 400;
   color: vars.$clr-text-primary;
   line-height: 1.5;
+  margin: 1em 0;
 }
 
 h3,
@@ -46,6 +55,7 @@ p,
   font-size: 1.125rem;
   font-weight: 400;
   color: vars.$clr-text-secondary;
+  line-height: 1.6;
 }
 
 a,
@@ -67,4 +77,12 @@ a:focus-visible,
   font-size: 1.5rem;
   font-weight: 700;
   color: vars.$clr-accent;
+}
+
+@media (max-width: vars.$size-tablet) {
+  p,
+  .text--body {
+    font-family: vars.$font-secondary;
+    font-size: 1rem;
+  }
 }
