@@ -13,8 +13,6 @@
 </div>
 
 <style lang="scss">
-  @use '../../styles/vars';
-
   .blobs {
     position: absolute;
     top: 0;
