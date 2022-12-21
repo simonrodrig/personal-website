@@ -3,6 +3,7 @@
   import IconCardLink from '$lib/IconCardLink.svelte';
   import Card from '$lib/Card.svelte';
   import Image from 'svimg';
+  import ProjectLink from '$lib/ProjectLink.svelte';
 </script>
 
 <svelte:head>
@@ -15,12 +16,10 @@
 </svelte:head>
 
 <section id="home" class="hero">
-  <div class="left">
-    <div class="Portrait-Container">
-      <Portrait innerLayerColor="#E95678" outerLayerColor="#232530">
-        <Image src="headshot.jpeg" alt="Headshot portrait of Simon" immediate />
-      </Portrait>
-    </div>
+  <div class="Portrait-Container">
+    <Portrait innerLayerColor="#E95678" outerLayerColor="#232530">
+      <Image src="headshot.jpeg" alt="Headshot portrait of Simon" immediate />
+    </Portrait>
   </div>
 
   <div class="right">
@@ -28,8 +27,8 @@
     <p class="heading--subtitle">
       Developer with an interest in frontend web development, UI/UX design, and open source.
     </p>
-    <a class="cta" href="#say-hello">
-      <p class="text--link">Say Hello</p>
+    <a class="cta text--link" href="#say-hello">
+      Say Hello
       <iconify-icon icon="fe:arrow-right" width="24" />
     </a>
   </div>
@@ -60,13 +59,38 @@
       >
     </p>
   </Card>
+</section>
 
+<h2>Some of my projects</h2>
+<section id="projects" class="projects">
+  <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png">
+    <h3>Raudio</h3>
+    <p>Internet radio streaming</p>
+  </ProjectLink>
+  <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png">
+    <h3>Raudio</h3>
+    <p>Internet radio streaming</p>
+  </ProjectLink>
+  <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png">
+    <h3>Raudio</h3>
+    <p>Internet radio streaming</p>
+  </ProjectLink>
+  <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png">
+    <h3>Raudio</h3>
+    <p>Internet radio streaming</p>
+  </ProjectLink>
+
+  <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png" />
+  <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png" />
+</section>
+
+<section class="contact">
   <Card icon="fe:sunny-o">
     <h2 id="say-hello">Say Hello!</h2>
-
+  
     <h3>Email</h3>
     <a id="email" href="mailto:simon@rodrig.dev">simon@rodrig.dev</a>
-
+  
     <h3>Job Materials</h3>
     <IconCardLink href="/resume.pdf" iconName="carbon:document-pdf">
       <p slot="link-name">Resume</p>
@@ -94,8 +118,7 @@
     justify-content: center;
     align-items: center;
 
-    .right,
-    .left {
+    > * {
       max-width: 40em;
     }
 
@@ -104,10 +127,7 @@
       flex-flow: row;
       align-items: center;
       gap: 0.3em;
-
-      p {
-        font-size: 1.25rem;
-      }
+      font-size: 1.25rem;
     }
 
     .Portrait-Container {
@@ -118,45 +138,15 @@
       height: var(--clamp);
       width: var(--clamp);
     }
-
-    .left {
-      display: flex;
-      justify-content: flex-end;
-    }
   }
 
   .quick-facts {
-    padding: 0 0.5em;
-
-    display: grid;
-    grid-auto-columns: 1fr;
-    gap: 1.5em;
-
     max-width: 75em;
     margin: auto;
-
-    grid-template-areas:
-      'one two three'
-      'four four four'
-      'four four four';
-
-    :global(div):nth-child(1) {
-      grid-area: one;
-    }
-
-    :global(div):nth-child(2) {
-      grid-area: two;
-    }
-
-    :global(div):nth-child(3) {
-      grid-area: three;
-    }
-
-    :global(div):nth-child(4) {
-      grid-area: four;
-      aspect-ratio: unset;
-      min-height: 20em;
-    }
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
 
     #email {
       font-size: 1.2rem;
@@ -165,15 +155,25 @@
     }
   }
 
+  .projects {
+    max-width: 90em;
+    margin: 2em auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+  }
+
+  .contact {
+    margin: 2em auto;
+    max-width: 74em;
+  }
+
   @media (max-width: vars.$size-tablet) {
     .hero {
       flex-flow: column;
       margin: 2em 0;
       gap: 0;
-
-      .left {
-        justify-content: center;
-      }
 
       .right > * {
         text-align: center;
@@ -183,20 +183,14 @@
         justify-content: center;
       }
     }
-
   }
 
   @media (max-width: vars.$size-phone) {
-    .quick-facts {
-      grid-template-areas:
-        'one'
-        'two'
-        'three'
-        'four';
-
-      :global():nth-child(4) {
-        min-height: unset;
-      }
+    .quick-facts, 
+    .projects {
+      padding: 1em;
+      grid-template-columns: auto;
     }
+
   }
 </style>
