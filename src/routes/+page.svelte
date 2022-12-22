@@ -147,12 +147,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5em;
-
-    #email {
-      font-size: 1.2rem;
-      display: inline-block;
-      margin-bottom: 1em;
-    }
   }
 
   .projects {
