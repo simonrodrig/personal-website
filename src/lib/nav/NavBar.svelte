@@ -40,9 +40,9 @@
   </div>
 
   <div class="right">
-    <a href="#home" tabindex="0">Home</a>
-    <a href="#about" tabindex="0">About</a>
-    <a href="#contact" tabindex="0">Contact</a>
+    <a href="/#home" tabindex="0">Home</a>
+    <a href="/#about" tabindex="0">About</a>
+    <a href="/#contact" tabindex="0">Contact</a>
   </div>
 </nav>
 
