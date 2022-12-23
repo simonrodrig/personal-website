@@ -1,6 +1,6 @@
 <script lang="ts">
   import ContactCard from '$lib/ContactCard.svelte';
-  
+
   import type { PageData } from './$types';
   export let data: PageData;
   const { attributes, html } = data.markdown;

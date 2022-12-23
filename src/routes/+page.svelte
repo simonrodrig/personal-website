@@ -80,7 +80,7 @@
       <h3>Raudio</h3>
       <p>Internet radio streaming</p>
     </ProjectLink>
-  
+
     <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png" />
     <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png" />
   </div>
@@ -126,7 +126,7 @@
   .quick-facts {
     max-width: 75em;
     margin: auto;
-    
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5em;
@@ -167,7 +167,7 @@
   }
 
   @media (max-width: vars.$size-phone) {
-    .quick-facts, 
+    .quick-facts,
     .projects {
       padding: 1em;
       grid-template-columns: auto;
@@ -183,6 +183,5 @@
     .contact {
       margin: 0 1em;
     }
-
   }
 </style>
