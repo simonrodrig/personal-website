@@ -28,7 +28,7 @@
     border-radius: vars.$border-radius-sm;
     overflow: hidden;
 
-    transition: filter 500ms ease-in-out;
+    transition: filter 1000ms ease-out;
 
     &:hover {
       filter: vars.$filter-shadow brightness(1.1);

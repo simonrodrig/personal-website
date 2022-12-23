@@ -65,6 +65,7 @@
       object-fit: cover;
       border-radius: vars.$border-radius-lg;
       width: 100%;
+      box-shadow: vars.$box-shadow;
     }
   }
 
@@ -75,6 +76,7 @@
     padding: 3em;
     border-radius: vars.$border-radius-lg;
     transform: var(--scrolledY);
+    box-shadow: vars.$box-shadow;
 
     .title-line {
       display: flex;
@@ -92,6 +94,7 @@
         gap: 0.2em;
         justify-content: center;
         align-items: center;
+        min-width: 10em;
       }
     }
 
@@ -136,8 +139,7 @@
         align-items: flex-start;
 
         a {
-          margin: 0.5em 0 0 0;
-          margin-right: 1em;
+          margin: 1em 1em 0 0;
         }
       }
     }

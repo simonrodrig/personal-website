@@ -28,9 +28,9 @@
 
     display: inline-flex;
 
-    transition: filter 150ms ease-out;
+    transition: box-shadow 150ms ease-out;
     &:is(:hover, :active) {
-      filter: vars.$filter-shadow;
+      box-shadow: vars.$box-shadow;
     }
 
     .icon-box {

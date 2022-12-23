@@ -1,7 +1,7 @@
 ---
 title: Raudio
 subtitle: Website and blog for an open source radio and streaming platform
-banner_href: "raudio_banner.png"
+banner_href: "/projects/raudio_banner.png"
 source_href: "https://github.com/raudio-project/raudio-project.github.io/"
 demo_href: "https://raudio-project.github.io/"
 ---

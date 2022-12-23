@@ -68,21 +68,23 @@
       <h3>Raudio</h3>
       <p>Internet radio streaming</p>
     </ProjectLink>
-    <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png">
-      <h3>Raudio</h3>
-      <p>Internet radio streaming</p>
+    <ProjectLink href="/projects/solitaire" imageHref="/projects/solitaire_banner.png">
+      <h3>Windows 3.0 Solitaire Solver & Player</h3>
+      <p>A reverse engineering project that solves the classic Windows game.</p>
     </ProjectLink>
-    <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png">
-      <h3>Raudio</h3>
-      <p>Internet radio streaming</p>
+    <ProjectLink href="/projects/image-hosting" imageHref="/projects/image_hosting_banner.png">
+      <h3>Image Hoster</h3>
+      <p>An image hoster built using React, TypeScript, and Framer Motion</p>
     </ProjectLink>
-    <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png">
-      <h3>Raudio</h3>
-      <p>Internet radio streaming</p>
+    <ProjectLink href="/projects/databases" imageHref="/projects/database_banner.png">
+      <h3>Notre Dame Event Tracker</h3>
+      <p>A database concepts project for finding events on campus</p>
     </ProjectLink>
 
-    <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png" />
-    <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png" />
+    <ProjectLink href="/projects/design-work" imageHref="/projects/design_banner.png">
+      <h3>Design Matters Coursework</h3>
+      <p>A case study on improving snacking on Notre Dame's campus</p>
+    </ProjectLink>
   </div>
 </section>
 
@@ -133,7 +135,7 @@
   }
 
   #projects {
-    // padding: 0 3em;
+    padding: 0 1em;
     margin: 2em auto;
     max-width: 90em;
   }
