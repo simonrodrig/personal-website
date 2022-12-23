@@ -31,6 +31,8 @@
 </Card>
 
 <style lang="scss">
+  @use '../styles/vars';
+
   #email {
     font-size: 1.2rem;
     display: inline-block;

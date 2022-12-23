@@ -1,6 +1,7 @@
 <script lang="ts">
   import ContactCard from '$lib/ContactCard.svelte';
-import type { PageData } from './$types';
+  
+  import type { PageData } from './$types';
   export let data: PageData;
   const { attributes, html } = data.markdown;
   const { title, subtitle, banner_href, demo_href, source_href } = attributes;
@@ -11,7 +12,7 @@ import type { PageData } from './$types';
   const handleScroll = () => {
     // Update the scrolling amount of the card
     scrollAmt = Math.min(scrollMax, scrollMax - window.scrollY);
-  }
+  };
 </script>
 
 <svelte:window on:scroll={handleScroll} />
@@ -27,10 +28,16 @@ import type { PageData } from './$types';
     <h1>{title}</h1>
     <div class="links">
       {#if demo_href}
-        <a href={demo_href}>See a live demo <iconify-icon icon="fe:arrow-right" width="20" height="20" /></a>
+        <a href={demo_href}>
+          See a live demo
+          <iconify-icon icon="fe:arrow-right" width="20" height="20" />
+        </a>
       {/if}
       {#if source_href}
-        <a href={source_href}>View the source code <iconify-icon icon="fe:arrow-right" width="20" height="20" /></a>
+        <a href={source_href}>
+          View the source code
+          <iconify-icon icon="fe:arrow-right" width="20" height="20" />
+        </a>
       {/if}
     </div>
   </div>
@@ -44,14 +51,8 @@ import type { PageData } from './$types';
   <ContactCard />
 </section>
 
-
 <style lang="scss">
-  @use '../../../styles/vars';  
-
-  @keyframes slide-up {
-    from { transform: translateY(-200px);}
-    to { transform: translateY(0); } 
-  }
+  @use '../../../styles/vars';
 
   .img-contain {
     position: relative;
@@ -69,11 +70,10 @@ import type { PageData } from './$types';
 
   main {
     margin: 1em auto;
-    max-width: 80em;
+    max-width: 70em;
     background-color: vars.$clr-background-light;
     padding: 3em;
     border-radius: vars.$border-radius-lg;
-    // filter: vars.$filter-shadow;
     transform: var(--scrolledY);
 
     .title-line {
@@ -102,6 +102,44 @@ import type { PageData } from './$types';
 
   .contact {
     margin: 2em auto;
-    max-width: 74em;
+    max-width: 70em;
+  }
+
+  @media (max-width: vars.$size-tablet) {
+    .img-contain {
+      img {
+        aspect-ratio: unset;
+      }
+    }
+
+    main {
+      transform: unset;
+      border-radius: 0;
+    }
+
+    .contact {
+      padding: 0 1em;
+    }
+  }
+
+  @media (max-width: vars.$size-phone) {
+    .img-contain {
+      padding: 0 1em;
+    }
+
+    main {
+      padding: 1.5em;
+
+      .title-line {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        a {
+          margin: 0.5em 0 0 0;
+          margin-right: 1em;
+        }
+      }
+    }
   }
 </style>

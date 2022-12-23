@@ -1,6 +1,5 @@
 <script lang="ts">
   import Portrait from '$lib/blobs/BlobPortrait.svelte';
-  import IconCardLink from '$lib/IconCardLink.svelte';
   import Card from '$lib/Card.svelte';
   import Image from 'svimg';
   import ProjectLink from '$lib/ProjectLink.svelte';
@@ -62,27 +61,29 @@
   </Card>
 </section>
 
-<h2>Some of my projects</h2>
-<section id="projects" class="projects">
-  <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png">
-    <h3>Raudio</h3>
-    <p>Internet radio streaming</p>
-  </ProjectLink>
-  <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png">
-    <h3>Raudio</h3>
-    <p>Internet radio streaming</p>
-  </ProjectLink>
-  <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png">
-    <h3>Raudio</h3>
-    <p>Internet radio streaming</p>
-  </ProjectLink>
-  <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png">
-    <h3>Raudio</h3>
-    <p>Internet radio streaming</p>
-  </ProjectLink>
-
-  <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png" />
-  <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png" />
+<section id="projects">
+  <h2>Some of my projects</h2>
+  <div class="projects">
+    <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png">
+      <h3>Raudio</h3>
+      <p>Internet radio streaming</p>
+    </ProjectLink>
+    <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png">
+      <h3>Raudio</h3>
+      <p>Internet radio streaming</p>
+    </ProjectLink>
+    <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png">
+      <h3>Raudio</h3>
+      <p>Internet radio streaming</p>
+    </ProjectLink>
+    <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png">
+      <h3>Raudio</h3>
+      <p>Internet radio streaming</p>
+    </ProjectLink>
+  
+    <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png" />
+    <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png" />
+  </div>
 </section>
 
 <section class="contact">
@@ -131,6 +132,10 @@
     gap: 1.5em;
   }
 
+  #projects {
+    padding: 0 3em;
+    margin: 2em 0;
+  }
   .projects {
     max-width: 90em;
     margin: 2em auto;
@@ -142,7 +147,7 @@
 
   .contact {
     margin: 2em auto;
-    max-width: 74em;
+    max-width: 70em;
   }
 
   @media (max-width: vars.$size-tablet) {
@@ -166,6 +171,17 @@
     .projects {
       padding: 1em;
       grid-template-columns: auto;
+    }
+
+    #projects {
+      padding: 0.5em;
+      h2 {
+        text-align: center;
+      }
+    }
+
+    .contact {
+      margin: 0 1em;
     }
 
   }
