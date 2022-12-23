@@ -1,9 +1,96 @@
 <script lang="ts">
   import type { PageData } from './$types';
-
   export let data: PageData;
   const { attributes, html } = data.markdown;
+  const { title, subtitle, banner_href, demo_href, source_href } = attributes;
+
+  const scrollMax = banner_href ? 200 : 0;
+  let scrollAmt = scrollMax;
+
+  const handleScroll = () => {
+    console.log(window.pageYOffset, window.scrollY,)
+    scrollAmt = Math.min(scrollMax, scrollMax - window.scrollY);
+  }
 </script>
 
-<h1>{attributes.title}</h1>
-{@html html}
+<svelte:window on:scroll={handleScroll} />
+
+{#if banner_href}
+  <div class="img-contain">
+    <img src={banner_href} alt="A screenshot demo of {attributes.title}" />
+  </div>
+{/if}
+
+<main style:--scrolledY="translateY(-{scrollAmt}px)">
+  <div class="title-line">
+    <h1>{title}</h1>
+    <div class="links">
+      {#if demo_href}
+        <a href={demo_href}>See a live demo <iconify-icon icon="fe:arrow-right" width="20" height="20" /></a>
+      {/if}
+      {#if source_href}
+        <a href={source_href}>View the source code <iconify-icon icon="fe:arrow-right" width="20" height="20" /></a>
+      {/if}
+    </div>
+  </div>
+  <p class="heading--subtitle">{subtitle}</p>
+
+  <!-- Inject the markdown we imported -->
+  {@html html}
+</main>
+
+<style lang="scss">
+  @use '../../../styles/vars';  
+
+  @keyframes slide-up {
+    from { transform: translateY(-200px);}
+    to { transform: translateY(0); } 
+  }
+
+  .img-contain {
+    position: relative;
+    max-width: 100em;
+    margin: 1em auto;
+    padding: 0 2em;
+
+    img {
+      aspect-ratio: 2.216;
+      object-fit: cover;
+      border-radius: vars.$border-radius-lg;
+      width: 100%;
+    }
+  }
+
+  main {
+    margin: 1em auto;
+    max-width: 80em;
+    background-color: vars.$clr-background-light;
+    padding: 3em;
+    border-radius: vars.$border-radius-lg;
+    filter: vars.$filter-shadow;
+    transform: var(--scrolledY);
+
+    .title-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h1 {
+        font-size: 4rem;
+        line-height: 1;
+      }
+
+      a {
+        margin: 0 1em;
+        display: inline-flex;
+        gap: 0.2em;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    :global(h2) {
+      margin: 1em 0 0.3em 0;
+    }
+  }
+</style>

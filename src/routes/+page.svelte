@@ -27,7 +27,7 @@
     <p class="heading--subtitle">
       Developer with an interest in frontend web development, UI/UX design, and open source.
     </p>
-    <a class="cta text--link" href="#say-hello">
+    <a class="cta text--link" href="/#say-hello">
       Say Hello
       <iconify-icon icon="fe:arrow-right" width="24" />
     </a>
