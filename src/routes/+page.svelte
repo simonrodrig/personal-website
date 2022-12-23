@@ -64,7 +64,7 @@
 <section id="projects">
   <h2>Some of my projects</h2>
   <div class="projects">
-    <ProjectLink href="/projects/raudio" imageHref="twitter-card-image.png">
+    <ProjectLink href="/projects/raudio" imageHref="/projects/raudio_banner.png">
       <h3>Raudio</h3>
       <p>Internet radio streaming</p>
     </ProjectLink>
@@ -133,12 +133,12 @@
   }
 
   #projects {
-    padding: 0 3em;
-    margin: 2em 0;
+    // padding: 0 3em;
+    margin: 2em auto;
+    max-width: 90em;
   }
   .projects {
-    max-width: 90em;
-    margin: 2em auto;
+    margin-top: 1em;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
