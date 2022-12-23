@@ -1,14 +1,15 @@
 <script lang="ts">
-  import type { PageData } from './$types';
+  import ContactCard from '$lib/ContactCard.svelte';
+import type { PageData } from './$types';
   export let data: PageData;
   const { attributes, html } = data.markdown;
   const { title, subtitle, banner_href, demo_href, source_href } = attributes;
 
-  const scrollMax = banner_href ? 200 : 0;
+  const scrollMax = banner_href ? 230 : 0;
   let scrollAmt = scrollMax;
 
   const handleScroll = () => {
-    console.log(window.pageYOffset, window.scrollY,)
+    // Update the scrolling amount of the card
     scrollAmt = Math.min(scrollMax, scrollMax - window.scrollY);
   }
 </script>
@@ -39,6 +40,11 @@
   {@html html}
 </main>
 
+<section class="contact">
+  <ContactCard />
+</section>
+
+
 <style lang="scss">
   @use '../../../styles/vars';  
 
@@ -67,7 +73,7 @@
     background-color: vars.$clr-background-light;
     padding: 3em;
     border-radius: vars.$border-radius-lg;
-    filter: vars.$filter-shadow;
+    // filter: vars.$filter-shadow;
     transform: var(--scrolledY);
 
     .title-line {
@@ -92,5 +98,10 @@
     :global(h2) {
       margin: 1em 0 0.3em 0;
     }
+  }
+
+  .contact {
+    margin: 2em auto;
+    max-width: 74em;
   }
 </style>

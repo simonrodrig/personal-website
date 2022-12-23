@@ -4,6 +4,7 @@
   import Card from '$lib/Card.svelte';
   import Image from 'svimg';
   import ProjectLink from '$lib/ProjectLink.svelte';
+  import ContactCard from '$lib/ContactCard.svelte';
 </script>
 
 <svelte:head>
@@ -85,26 +86,7 @@
 </section>
 
 <section class="contact">
-  <Card icon="fe:sunny-o">
-    <h2 id="say-hello">Say Hello!</h2>
-  
-    <h3>Email</h3>
-    <a id="email" href="mailto:simon@rodrig.dev">simon@rodrig.dev</a>
-  
-    <h3>Job Materials</h3>
-    <IconCardLink href="/resume.pdf" iconName="carbon:document-pdf">
-      <p slot="link-name">Resume</p>
-      <p slot="link-desc">View my experience and work</p>
-    </IconCardLink>
-    <IconCardLink href="https://github.com/simonrodrig/" iconName="ri:github-fill">
-      <p slot="link-name">GitHub</p>
-      <p slot="link-desc">View my source code</p>
-    </IconCardLink>
-    <IconCardLink href="https://linkedin.com/in/simonrodrig/" iconName="ri:linkedin-fill">
-      <p slot="link-name">LinkedIn</p>
-      <p slot="link-desc">Connect with me</p>
-    </IconCardLink>
-  </Card>
+  <ContactCard />
 </section>
 
 <style lang="scss">
