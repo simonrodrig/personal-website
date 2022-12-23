@@ -1,12 +1,6 @@
 <script lang="ts">
   export let href: string;
   export let imageHref: string;
-
-  let descIsShown = false;
-
-  function handleMouseIn() {
-
-  }
 </script>
 
 <a {href} style:--img-url="url({imageHref})">
@@ -26,15 +20,15 @@
     background-image: var(--img-url);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: center;
+    background-position: center;
     
-    // TODO: Play around with blend modes
     background-color: vars.$clr-background-light;
-    // background-blend-mode: multiply;
 
     border: 5px solid #333645;
     border-radius: vars.$border-radius-sm;
     overflow: hidden;
+
+    transition: filter 500ms ease-in-out;
 
     &:hover {
       filter: vars.$filter-shadow brightness(1.1);
@@ -49,6 +43,19 @@
       div {
         bottom: 0;
       }
+
+      &::after {
+        filter: opacity(0)
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+
+      background-color: vars.$clr-background-dark;
+      filter: opacity(0.4);
     }
   }
 
@@ -61,9 +68,15 @@
     background-color: vars.$clr-background-dark;
     transition: bottom 150ms ease-out;
     padding: 1em;
+    z-index: 100;
   }
 
   @media (max-width: vars.$size-tablet) {
+
+    a::after {
+      filter: opacity(0)
+    }
+
     div {
       bottom: 0;
     }
