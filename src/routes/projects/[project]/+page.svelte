@@ -6,7 +6,7 @@
   const { attributes, html } = data.markdown;
   const { title, subtitle, banner_href, demo_href, source_href } = attributes;
 
-  const scrollMax = banner_href ? 230 : 0;
+  const scrollMax = banner_href ? 250 : 0;
   let scrollAmt = scrollMax;
 
   const handleScroll = () => {
