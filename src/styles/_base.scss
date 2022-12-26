@@ -88,6 +88,8 @@ a:focus-visible,
 
 @media (max-width: vars.$size-tablet) {
   p,
+  li,
+  a,
   .text--body {
     font-family: vars.$font-secondary;
     font-size: 1rem;
