@@ -20,13 +20,11 @@
     background-color: vars.$clr-background-dark;
     border: 1px solid #16181f;
     border-radius: vars.$border-radius-sm;
-    /* filter: vars.$filter-shadow; */
     margin-right: 0.5em;
     margin-bottom: 0.5em;
 
-    min-width: 325px;
 
-    display: inline-flex;
+    display: flex;
 
     transition: box-shadow 150ms ease-out;
     &:is(:hover, :active) {

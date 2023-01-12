@@ -16,18 +16,20 @@
   <a id="email" href="mailto:simon@rodrig.dev">simon@rodrig.dev</a>
 
   <h3>Job Materials</h3>
-  <IconCardLink href="/resume.pdf" iconName="carbon:document-pdf">
-    <p slot="link-name">Resume</p>
-    <p slot="link-desc">View my experience and work</p>
-  </IconCardLink>
-  <IconCardLink href="https://github.com/simonrodrig/" iconName="ri:github-fill">
-    <p slot="link-name">GitHub</p>
-    <p slot="link-desc">View my source code</p>
-  </IconCardLink>
-  <IconCardLink href="https://linkedin.com/in/simonrodrig/" iconName="ri:linkedin-fill">
-    <p slot="link-name">LinkedIn</p>
-    <p slot="link-desc">Connect with me</p>
-  </IconCardLink>
+  <div class="links">
+    <IconCardLink href="/resume.pdf" iconName="carbon:document-pdf">
+      <p slot="link-name">Resume</p>
+      <p slot="link-desc">View my experience and work</p>
+    </IconCardLink>
+    <IconCardLink href="https://github.com/simonrodrig/" iconName="ri:github-fill">
+      <p slot="link-name">GitHub</p>
+      <p slot="link-desc">View my source code</p>
+    </IconCardLink>
+    <IconCardLink href="https://linkedin.com/in/simonrodrig/" iconName="ri:linkedin-fill">
+      <p slot="link-name">LinkedIn</p>
+      <p slot="link-desc">Connect with me</p>
+    </IconCardLink>
+  </div>
 </Card>
 
 <style lang="scss">
@@ -38,5 +40,10 @@
     display: inline-block;
     margin-bottom: 1em;
     // margin-top: 0.2em;
+  }
+
+  .links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
   }
 </style>
