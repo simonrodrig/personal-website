@@ -85,7 +85,7 @@
 
       h1 {
         font-size: 4rem;
-        line-height: 1;
+        line-height: 1.2;
       }
 
       a {
@@ -100,6 +100,10 @@
 
     :global(h2) {
       margin: 1em 0 0.3em 0;
+    }
+
+    :global(p) {
+      margin-bottom: 1em;
     }
   }
 

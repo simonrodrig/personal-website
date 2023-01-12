@@ -64,6 +64,11 @@ li {
   margin-left: 1.75rem;
 }
 
+ul,
+ol {
+  margin-bottom: 1em;
+}
+
 a,
 .text--link {
   font-family: vars.$font-secondary;
