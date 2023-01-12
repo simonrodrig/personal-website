@@ -12,4 +12,4 @@ banner_href: "/projects/image_hosting_banner.png"
 
 ## Note
 This project was completed for the purposes of a course in Web Development,
-therefore the source code cannot be distributed publically.
+therefore the source code cannot be distributed publicly.
