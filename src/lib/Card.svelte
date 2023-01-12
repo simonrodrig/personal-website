@@ -23,7 +23,6 @@
 
   @media (max-width: vars.$size-tablet) {
     .Card {
-      padding: 1em;
       border-radius: vars.$border-radius-sm;
     }
   }

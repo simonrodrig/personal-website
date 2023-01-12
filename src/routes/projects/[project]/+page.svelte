@@ -6,16 +6,16 @@
   const { attributes, html } = data.markdown;
   const { title, subtitle, banner_href, demo_href, source_href } = attributes;
 
-  const scrollMax = banner_href ? 250 : 0;
-  let scrollAmt = scrollMax;
+  // const scrollMax = banner_href ? 250 : 0;
+  // let scrollAmt = scrollMax;
 
-  const handleScroll = () => {
-    // Update the scrolling amount of the card
-    scrollAmt = Math.min(scrollMax, scrollMax - window.scrollY);
-  };
+  // const handleScroll = () => {
+  //   // Update the scrolling amount of the card
+  //   scrollAmt = Math.min(scrollMax, scrollMax - window.scrollY);
+  // };
 </script>
 
-<svelte:window on:scroll={handleScroll} />
+<!-- <svelte:window on:scroll={handleScroll} /> -->
 
 {#if banner_href}
   <div class="img-contain">
@@ -23,7 +23,7 @@
   </div>
 {/if}
 
-<main style:--scrolledY="translateY(-{scrollAmt}px)">
+<main>
   <div class="title-line">
     <h1>{title}</h1>
     <div class="links">
@@ -56,12 +56,12 @@
 
   .img-contain {
     position: relative;
-    max-width: 100em;
-    margin: 1em auto;
-    padding: 0 2em;
+    max-width: 70em;
+    margin: 3em auto 0 auto;
+    /* padding: 0 2em; */
 
     img {
-      aspect-ratio: 2.216;
+      aspect-ratio: 2;
       object-fit: cover;
       border-radius: vars.$border-radius-lg;
       width: 100%;
@@ -70,12 +70,11 @@
   }
 
   main {
-    margin: 1em auto;
+    margin: 0.5em auto;
     max-width: 70em;
     background-color: vars.$clr-background-light;
     padding: 3em;
     border-radius: vars.$border-radius-lg;
-    transform: var(--scrolledY);
     box-shadow: vars.$box-shadow;
 
     .title-line {
@@ -84,7 +83,7 @@
       align-items: center;
 
       h1 {
-        font-size: 4rem;
+        font-size: clamp(1.5rem, 1rem + 10vw, 4rem);
         line-height: 1.2;
       }
 
@@ -114,28 +113,34 @@
 
   @media (max-width: vars.$size-tablet) {
     .img-contain {
+      margin: 0.5em 2em;
+
       img {
         aspect-ratio: unset;
       }
     }
 
     main {
-      transform: unset;
-      border-radius: 0;
+      margin: 0em 2em;
     }
 
     .contact {
-      padding: 0 1em;
+      padding: 0 2em;
     }
   }
 
   @media (max-width: vars.$size-phone) {
     .img-contain {
-      padding: 0 1em;
+      margin: 0;
+
+      img {
+        border-radius: 0;
+      }
     }
 
     main {
       padding: 1.5em;
+      margin: 0;
 
       .title-line {
         flex-direction: column;
