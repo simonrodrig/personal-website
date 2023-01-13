@@ -62,7 +62,7 @@
       .description > :global(*) {
         margin: 0;
         font-weight: 400;
-        font-size: 1rem;
+        font-size: clamp(0.75rem, 80%, 1rem);
         line-height: var(--line-height);
       }
     }
