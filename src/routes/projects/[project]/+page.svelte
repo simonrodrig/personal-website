@@ -5,63 +5,60 @@
   export let data: PageData;
   const { attributes, html } = data.markdown;
   const { title, subtitle, banner_href, demo_href, source_href } = attributes;
-
-  // const scrollMax = banner_href ? 250 : 0;
-  // let scrollAmt = scrollMax;
-
-  // const handleScroll = () => {
-  //   // Update the scrolling amount of the card
-  //   scrollAmt = Math.min(scrollMax, scrollMax - window.scrollY);
-  // };
 </script>
 
-<!-- <svelte:window on:scroll={handleScroll} /> -->
-
-{#if banner_href}
-  <div class="img-contain">
-    <img src={banner_href} alt="A screenshot demo of {attributes.title}" />
-  </div>
-{/if}
-
-<main>
-  <div class="title-line">
-    <h1>{title}</h1>
-    <div class="links">
-      {#if demo_href}
-        <a href={demo_href}>
-          See a live demo
-          <iconify-icon icon="fe:arrow-right" width="20" height="20" />
-        </a>
-      {/if}
-      {#if source_href}
-        <a href={source_href}>
-          View the source code
-          <iconify-icon icon="fe:arrow-right" width="20" height="20" />
-        </a>
-      {/if}
+<div class="content">
+  
+  {#if banner_href}
+    <div class="img-contain">
+      <img src={banner_href} alt="A screenshot demo of {attributes.title}" />
     </div>
-  </div>
-  <p class="heading--subtitle">{subtitle}</p>
-
-  <!-- Inject the markdown we imported -->
-  {@html html}
-</main>
-
-<section class="contact">
-  <ContactCard />
-</section>
+  {/if}
+  
+  <main>
+    <div class="title-line">
+      <h1>{title}</h1>
+      <div class="links">
+        {#if demo_href}
+          <a href={demo_href}>
+            See a live demo
+            <iconify-icon icon="fe:arrow-right" width="20" height="20" />
+          </a>
+        {/if}
+        {#if source_href}
+          <a href={source_href}>
+            View the source code
+            <iconify-icon icon="fe:arrow-right" width="20" height="20" />
+          </a>
+        {/if}
+      </div>
+    </div>
+    <p class="heading--subtitle">{subtitle}</p>
+  
+    <!-- Inject the markdown we imported -->
+    {@html html}
+  </main>
+  
+  <section class="contact">
+    <ContactCard />
+  </section>
+</div>
 
 <style lang="scss">
   @use '../../../styles/vars';
 
+  .content {
+    padding: 2em;
+  }
+
   .img-contain {
     position: relative;
     max-width: 70em;
-    margin: 3em auto 0 auto;
+    margin: 1em auto 0 auto;
     /* padding: 0 2em; */
 
     img {
-      aspect-ratio: 2;
+      aspect-ratio: 1.75;
       object-fit: cover;
       border-radius: vars.$border-radius-lg;
       width: 100%;
@@ -112,6 +109,10 @@
   }
 
   @media (max-width: vars.$size-tablet) {
+    .content {
+      padding: 0;
+    }
+
     .img-contain {
       margin: 0.5em 2em;
 
@@ -141,6 +142,7 @@
     main {
       padding: 1.5em;
       margin: 0;
+      border-radius: 0;
 
       .title-line {
         flex-direction: column;
