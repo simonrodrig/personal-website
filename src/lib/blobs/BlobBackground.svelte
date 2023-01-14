@@ -10,16 +10,23 @@
   <div class="blob-contain blob-2">
     <Blob />
   </div>
+
+  <div class="blob-contain blob-3">
+    <Blob />
+  </div>
 </div>
 
 <style lang="scss">
+
+
   .blobs {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     // FIXME: How to make this the height of the body instead?
-    height: 100%;
+    height: 250vh;
+    /* height: 100%; */
     overflow: hidden;
     pointer-events: none;
   }
@@ -38,5 +45,11 @@
     right: -35em;
     top: -20em;
     width: clamp(70vw, 10vw + 1rem, 80vw);
+  }
+
+  .blob-3 {
+    left: -5em;
+    top: 50em;
+    width: clamp(80vw, 20vw + 1rem, 90vw);
   }
 </style>
