@@ -52,7 +52,7 @@
   </Card>
 
   <Card icon="fe:link">
-    <h2 id="contact">Contact</h2>
+    <h2>Contact</h2>
     <p>
       If you're interested in working with me, please reach me through <em
         >simon[at]rodrig[dot]dev.</em
@@ -88,7 +88,7 @@
   </div>
 </section>
 
-<section class="contact">
+<section id="contact" class="contact">
   <ContactCard />
 </section>
 

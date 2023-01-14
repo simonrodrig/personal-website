@@ -9,7 +9,7 @@ demo_href: "https://drive.google.com/file/d/1JOcJHzdCbSPVUJk-XWJfoRNQNJ9OjCrm/vi
 This project was done for a non-technical design class I took during my
 undergraduate studies named "Design Matters." It was a hands-on introduction
 to the concept of Human Centered Design, and specifically tasked with equipping
-students with the knowledge to produce products that meaningfully solves
+students with the knowledge to develop products that meaningfully solve
 problems for a consumer. The course was open to people of any major, and is
 structured as the first course for a design minor offered at my university. I
 had a unique background in this course being one of only a few students from the

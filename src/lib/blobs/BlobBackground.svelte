@@ -11,9 +11,9 @@
     <Blob />
   </div>
 
-  <div class="blob-contain blob-3">
+  <!-- <div class="blob-contain blob-3">
     <Blob />
-  </div>
+  </div> -->
 </div>
 
 <style lang="scss">
@@ -25,8 +25,8 @@
     left: 0;
     width: 100%;
     // FIXME: How to make this the height of the body instead?
-    height: 250vh;
-    /* height: 100%; */
+    /* height: 250vh; */
+    height: 100%;
     overflow: hidden;
     pointer-events: none;
   }

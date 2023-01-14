@@ -29,7 +29,7 @@ projects such as [Icecast](https://icecast.org/) or
 [Shoutcast](https://www.shoutcast.com/). These programs are designed as personal
 internet radio solutions, and as a result, are often designed for large-scale
 distribution of audio streams, and it can often be difficult to configure an
-audio server, and even difficult for users to actually listen to that stream
+audio server, and difficult for users to actually listen to that stream
 on all of their devices.
 
 ## Approach
@@ -45,7 +45,7 @@ with support for casual voice calling. In addition, there already existed a
 number of clients with support for streaming [YouTube](https://youtube.com) 
 content, but many of them were shutting down at the time due to copyright
 concerns, which we felt provided a perfect opportunity to provide an alternative
-service that addressed the desire for people to share music with eachother
+service that addressed the desire for people to share music with each other
 remotely, especially during the pandemic.
 
 In order to stream the content, we also needed to create an audio streaming
@@ -81,7 +81,7 @@ We decided that our SSG of choice would be [11ty](https://www.11ty.dev/). This
 project had recently hit their 1.0 release at the time and supported all of our
 needs. We developed the site using [Nunjucks](https://mozilla.github.io/nunjucks/),
 a templating language that would allow us to extend templates, separate headers
-and footers into their own "components", and make the development fast. If I
+and footers into their own "components", and develop quickly. If I
 were to work on this project again, I would have likely considered some of the
 newer alternatives, such as [Astro](https://astro.build/). Astro resembles a lot
 of the classic SSGs by transforming templates into static files that don't ship

@@ -36,7 +36,9 @@
     <p class="heading--subtitle">{subtitle}</p>
   
     <!-- Inject the markdown we imported -->
-    {@html html}
+    <div class="md-content">
+      {@html html}
+    </div>
   </main>
   
   <section class="contact">
@@ -100,6 +102,15 @@
 
     :global(p) {
       margin-bottom: 1em;
+    }
+
+    .md-content :global(a) {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+
+      &:hover {
+        filter: brightness(1.2);
+      }
     }
   }
 

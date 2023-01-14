@@ -21,15 +21,16 @@ the user for use in chat platforms like Discord or IRC.
 
 ## Approach
 Because the scope of the course was limited to frontend development, the backend
-for this website was to be a hosted solution. Specifically, we utilized a service
-called [Back4App](https://www.back4app.com/), which utilizes the
-[Parse](https://docs.parseplatform.org/) backend, which is an open-source
-node.js backend. It provides a number of SDKs for various platforms to interact
-with the server, similarly to how one might use Firebase. The benefits of using
+for this website was to be a hosted solution. Specifically we utilized
+[Back4App](https://www.back4app.com/), a service hosted on the
+[Parse](https://docs.parseplatform.org/) framework, which is an open-source
+Node.js backend. It provides a number of SDKs for various platforms to interact
+with the server, similarly to how one might use 
+[Firebase](https://firebase.google.com/). The benefits of using
 Parse included the ability to act with a realtime database, which has a number
 of useful abstractions built-in. It also included a very useful web interface
-to view and edit records. Because of this, creating the database was extremely
-seamless, no need to write schemas or relations.
+to view and edit records. Because of this, creating the database was
+seamless: no need to write schemas or relations.
 
 On the front-end, we utilized a React interface using TypeScript and SCSS. In
 the initial phase of the project, we utilized [Preact](https://preactjs.com/)
@@ -42,9 +43,9 @@ The final deliverable fit neatly within our goal of shipping a minimal product.
 The home page included a simple box that could be used to upload an image,
 along with a button that would route to a separate page containing a gallery
 of images they uploaded, with the ability to click on an image and view its
-corresponding EXIF metadata.
+corresponding metadata.
 
-Part of the final phase of the project were to implement three features using
+Part of the final phase of the project was to implement three features using
 the typical Agile-style point allotment system. For this, we developed user
 stories for various features that could be added to our web application, and
 selected a number of them to do over a two week sprint. A TypeScript migration

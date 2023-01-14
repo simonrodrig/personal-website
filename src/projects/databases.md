@@ -7,7 +7,7 @@ banner_href: "/projects/database_banner.png"
 ## Problem
 This project was conducted for a course titled Database Concepts. As the name
 implies, it was dedicated to learning about the fundamentals of databases, both
-the theory and the practical application, and learn to apply those skills in
+the theory and the practical application, and to apply those skills in
 one final semester-long project.
 
 Our group's project focused on the topic of event tracking on our college's
@@ -32,7 +32,7 @@ actually uses a publicly available API provided by the university. However, we
 wanted to maintain our own listing of events, meaning we had to download the
 listing of events from the API, transform them into data that fit our database
 schema, then ingest them into our own database. In particular, we needed to
-sanitize much of the data because things like image descriptions contained
+sanitize much of the data because things like event descriptions contained
 embedded HTML, and images used relative URLs rather than absolute.
 
 Of course, this project contained the classic backend/frontend structure, so we
@@ -53,7 +53,7 @@ this project. However, this would be a wonderful opportunity to learn.
 
 ## Solution
 Though we had delegated frontend and backend work to separate teams, we still
-had to work together not only to decide things like Schema, but also to
+had to work together not only to decide things like the schema, but also to
 standardize API endpoints. We ran into many issues with data-ingestion that
 we did not foresee, such as the embedded HTML, which required using the
 BeautifulSoup library to strip HTML tags out of the ingested data. We also
@@ -62,7 +62,7 @@ difficult to diagnose.
 
 However, easily the most complicated aspect of this project was the frontend,
 and doubly complicated by the fact none of our project members had prior web
-development experience. The frontend was written in pure JavaScript without any
+development experience. The frontend was written in JavaScript without any
 frameworks, and we utilized the official Google Maps library in order to display
 a map with markers. The website was quite difficult to maintain. Much of our
 code was littered with event listeners everywhere, and there was quite a bit of
@@ -76,7 +76,7 @@ I think I would have done quite a bit differently if I could do this project
 again with the skills I have now. This type of application is exactly suited to
 something like React or Next.js by offering a SPA experience. Having components
 would have suited this project perfectly. In particular, Next.js would have
-worked wonderfully in particularly since it also allows you to create API
+worked wonderfully because it also allows you to create API
 endpoints that can be acessed by your web application. It would have meant we
 were all working with a single codebase and in a single language, meaning our
 productivity would have been much greater.
@@ -95,7 +95,7 @@ little about web development. The final project was quite sophisticated,
 displaying events in a horizontal list with animations as you scrolled through
 each event. There was much attention paid to the UI interface, with wireframes
 being made in Figma complete with animations and gestures. The website was also
-optimized for mobile as well. I think this project in particular is what really
+optimized for mobile as well. This project in particular is what really
 sparked my passion for web developement and got me started on this career path.
 
 ## Note

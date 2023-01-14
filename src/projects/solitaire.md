@@ -53,8 +53,8 @@ following that was achieved with this project:
 ### Reverse Engineering and Reading Game State
 In our reverse engineering efforts, we expected to find a specific byte location
 in memory where the game's state was stored, and we could hardcode that specific
-location to be read by our program, however, we quickly realized the location
-of the game's state was not always in the same location. Instead, we discovered
+location to be read by our program, however, we quickly realized the 
+game's state was not always in the same location. Instead, we discovered
 that before the game's state began, there was a specific byte pattern that always
 appeared, and could not be found anywhere else in the game's memory. This is
 likely some other data related to the game's state, but we could use it as a
@@ -66,7 +66,7 @@ In order to programmatically read the game's state, we used the
 [Pymem](https://github.com/srounet/Pymem), which is a series of tools to
 manipulate Windows processes. Notably, this library allows us to read the game's
 memory state when it launches, and search for a specific byte pattern. In doing
-so, we could read the game's 52 cards in 12-byte segments. with some translation,
+so, we could read the game's 52 cards in 12-byte segments. With some translation,
 we could convert these 12 bytes into a format readable by a solver algorithm.
 
 ### Solver Algorithm
@@ -91,7 +91,7 @@ Using some of the layout tools available, I created a window with cards laid
 out in the same manner as the game. For each move produced by the solver, the
 GUI will highlight the specific card in its current location in the game and
 outline the spot that the card must be moved to. There are "Next" and "Previous"
-buttons to allow the user to move forward in the move list.
+buttons to allow the user to move through the move list.
 
 In addition to a guided solver, we also were able to include a proof-of-concept
 for an automatic solver. For this component, we would bypass the need for a GUI
