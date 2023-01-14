@@ -1,27 +1,34 @@
 <script lang="ts">
-  import Portrait from "../components/Blobs/BlobPortrait.svelte";
-  import IconCardLink from "../components/IconCardLink.svelte";
-  import Card from "../components/Card.svelte";
-  import Image from "svimg";
+  import Portrait from '$lib/blobs/BlobPortrait.svelte';
+  import Card from '$lib/Card.svelte';
+  import Image from 'svimg';
+  import ProjectLink from '$lib/ProjectLink.svelte';
+  import ContactCard from '$lib/ContactCard.svelte';
 </script>
 
+<svelte:head>
+  <title>Simon Rodriguez | Front-end Software Developer</title>
+
+  <meta
+    name="description"
+    content="Simon is a developer with an interest in frontend web development, UI/UX design, and open source."
+  />
+</svelte:head>
+
 <section id="home" class="hero">
-  <div class="left">
-    <div class="Portrait-Container">
-      <Portrait innerLayerColor="#E95678" outerLayerColor="#232530">
-        <Image src="headshot.jpeg" alt="Headshot portrait of Simon" immediate />
-      </Portrait>
-    </div>
+  <div class="Portrait-Container">
+    <Portrait innerLayerColor="#E95678" outerLayerColor="#232530">
+      <Image src="headshot.jpeg" alt="Headshot portrait of Simon" immediate />
+    </Portrait>
   </div>
 
   <div class="right">
     <h1>Simon<br />Rodriguez</h1>
-    <p class="heading--secondary">
-      Developer with an interest in frontend web development, UI/UX design, and
-      open source.
+    <p class="heading--subtitle">
+      Developer with an interest in frontend web development, UI/UX design, and open source.
     </p>
-    <a class="cta" href="#say-hello">
-      <p class="text--link">Say Hello</p>
+    <a class="cta text--link" href="/#say-hello">
+      Say Hello
       <iconify-icon icon="fe:arrow-right" width="24" />
     </a>
   </div>
@@ -31,60 +38,62 @@
   <Card icon="fe:globe">
     <h2 id="about">About Me</h2>
     <p>
-      Hey there! I'm a recent college graduate with a passion for tech. When I'm
-      not working, you can find me cooking, spending time with my cats, or
-      playing video games!
+      Hey there! I'm a recent college graduate with a passion for tech. When I'm not working, you
+      can find me cooking, spending time with my cats, or playing video games!
     </p>
   </Card>
 
   <Card icon="fe:calendar">
     <h2>What I'm up to</h2>
     <p>
-      Currently I'm looking for work! I'm available to work <b
-        >remote in the US</b
-      >, or somewhere in the <b>Massachusetts area</b>.
+      Currently I'm looking for work! I'm available to work <b>remote in the US</b>, or somewhere in
+      the <b>Massachusetts area</b>.
     </p>
   </Card>
 
   <Card icon="fe:link">
-    <h2 id="contact">Contact</h2>
+    <h2>Contact</h2>
     <p>
       If you're interested in working with me, please reach me through <em
         >simon[at]rodrig[dot]dev.</em
       >
     </p>
   </Card>
+</section>
 
-  <Card icon="fe:sunny-o">
-    <h2 id="say-hello">Say Hello!</h2>
+<section id="projects">
+  <h2>Some of my projects</h2>
+  <div class="projects">
+    <ProjectLink href="/projects/raudio" imageHref="/projects/raudio_banner.png">
+      <h3>Raudio</h3>
+      <p>Internet radio streaming</p>
+    </ProjectLink>
+    <ProjectLink href="/projects/solitaire" imageHref="/projects/solitaire_banner.png">
+      <h3>Windows 3.0 Solitaire Solver & Player</h3>
+      <p>A reverse engineering project that solves the classic Windows game.</p>
+    </ProjectLink>
+    <ProjectLink href="/projects/image-hosting" imageHref="/projects/image_hosting_banner.png">
+      <h3>Image Hoster</h3>
+      <p>An image hoster built using React, TypeScript, and Framer Motion</p>
+    </ProjectLink>
+    <ProjectLink href="/projects/databases" imageHref="/projects/database_banner.png">
+      <h3>Notre Dame Event Tracker</h3>
+      <p>A database concepts project for finding events on campus</p>
+    </ProjectLink>
 
-    <h3>Email</h3>
-    <a id="email" href="mailto:simon@rodrig.dev">simon@rodrig.dev</a>
+    <ProjectLink href="/projects/design-work" imageHref="/projects/design_banner.png">
+      <h3>Design Matters Coursework</h3>
+      <p>A case study on improving snacking on Notre Dame's campus</p>
+    </ProjectLink>
+  </div>
+</section>
 
-    <h3>Job Materials</h3>
-    <IconCardLink href="/resume.pdf" iconName="carbon:document-pdf">
-      <p slot="link-name">Resume</p>
-      <p slot="link-desc">View my experience and work</p>
-    </IconCardLink>
-    <IconCardLink
-      href="https://github.com/simonrodrig/"
-      iconName="ri:github-fill"
-    >
-      <p slot="link-name">GitHub</p>
-      <p slot="link-desc">View my source code</p>
-    </IconCardLink>
-    <IconCardLink
-      href="https://linkedin.com/in/simonrodrig/"
-      iconName="ri:linkedin-fill"
-    >
-      <p slot="link-name">LinkedIn</p>
-      <p slot="link-desc">Connect with me</p>
-    </IconCardLink>
-  </Card>
+<section id="contact" class="contact">
+  <ContactCard />
 </section>
 
 <style lang="scss">
-  @use "../styles/base";
+  @use '../styles/vars';
 
   .hero {
     min-height: 75%;
@@ -94,14 +103,7 @@
     justify-content: center;
     align-items: center;
 
-    .right {
-      .heading--secondary {
-        margin: 1em 0;
-      }
-    }
-
-    .right,
-    .left {
+    > * {
       max-width: 40em;
     }
 
@@ -110,10 +112,7 @@
       flex-flow: row;
       align-items: center;
       gap: 0.3em;
-
-      p {
-        font-size: 1.25rem;
-      }
+      font-size: 1.25rem;
     }
 
     .Portrait-Container {
@@ -124,79 +123,40 @@
       height: var(--clamp);
       width: var(--clamp);
     }
-
-    .left {
-      display: flex;
-      justify-content: flex-end;
-    }
   }
 
   .quick-facts {
-    padding: 0 0.5em;
-
-    display: grid;
-    grid-auto-columns: 1fr;
-    gap: 1.5em;
-
     max-width: 75em;
     margin: auto;
 
-    grid-template-areas:
-      "one two three"
-      "four four four"
-      "four four four";
-
-    :global(div):nth-child(1) {
-      grid-area: one;
-    }
-
-    :global(div):nth-child(2) {
-      grid-area: two;
-    }
-
-    :global(div):nth-child(3) {
-      grid-area: three;
-    }
-
-    :global(div):nth-child(4) {
-      grid-area: four;
-      aspect-ratio: unset;
-      min-height: 20em;
-    }
-
-    h2 {
-      font-family: base.$font-primary;
-      font-weight: 600;
-      font-size: 1.5rem;
-      line-height: 2;
-    }
-
-    p {
-      color: base.$clr-text-secondary;
-      line-height: 1.6;
-
-      em {
-        color: base.$clr-accent;
-        font-style: normal;
-      }
-    }
-
-    #email {
-      font-size: 1.2rem;
-      display: inline-block;
-      margin-bottom: 1em;
-    }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
   }
 
-  @media (max-width: base.$size-tablet) {
+  #projects {
+    padding: 0 1em;
+    margin: 2em auto;
+    max-width: 90em;
+  }
+  .projects {
+    margin-top: 1em;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+  }
+
+  .contact {
+    margin: 2em auto;
+    max-width: 70em;
+  }
+
+  @media (max-width: vars.$size-tablet) {
     .hero {
       flex-flow: column;
       margin: 2em 0;
       gap: 0;
-
-      .left {
-        justify-content: center;
-      }
 
       .right > * {
         text-align: center;
@@ -206,28 +166,24 @@
         justify-content: center;
       }
     }
-
-    .quick-facts {
-      h2 {
-        font-size: 1.25rem;
-      }
-      p {
-        font-size: 1rem;
-      }
-    }
   }
 
-  @media (max-width: base.$size-phone) {
-    .quick-facts {
-      grid-template-areas:
-        "one"
-        "two"
-        "three"
-        "four";
+  @media (max-width: vars.$size-phone) {
+    .quick-facts,
+    .projects {
+      padding: 1em;
+      grid-template-columns: auto;
+    }
 
-      :global():nth-child(4) {
-        min-height: unset;
+    #projects {
+      padding: 0.5em;
+      h2 {
+        text-align: center;
       }
+    }
+
+    .contact {
+      margin: 0 1em;
     }
   }
 </style>

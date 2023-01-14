@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Blob from "./Blob.svelte";
+  import Blob from './Blob.svelte';
 
   export let innerLayerColor: string;
   export let outerLayerColor: string;
@@ -20,11 +20,11 @@
 </div>
 
 <style lang="scss">
-  @use '../../styles/base';
-  
+  @use '../../styles/vars';
+
   .container {
     position: relative;
-    
+
     width: 100%;
     height: 100%;
   }
@@ -35,7 +35,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    filter: base.$filter-shadow
+    filter: vars.$filter-shadow;
   }
 
   .background-blob {
@@ -57,5 +57,4 @@
     width: 100%;
     border-radius: 50%;
   }
-
 </style>
