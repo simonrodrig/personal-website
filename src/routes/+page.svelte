@@ -46,8 +46,8 @@
   <Card icon="fe:calendar">
     <h2>What I'm up to</h2>
     <p>
-      Currently I'm looking for work! I'm available to work <b>remote in the US</b>, or somewhere in
-      the <b>Massachusetts area</b>.
+      I'm currently working at <a href="https://www.volosports.com/">Volo Sports</a>
+      as a Full Stack Software Engineer!
     </p>
   </Card>
 
