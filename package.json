@@ -16,7 +16,7 @@
     "@sveltejs/kit": "next",
     "gh-pages": "^5.0.0",
     "iconify-icon": "^1.0.2",
-    "prettier": "^2.8.1",
+    "prettier": "^2.8.8",
     "prettier-plugin-svelte": "^2.9.0",
     "sass": "^1.62.1",
     "svelte": "^3.58.0",
