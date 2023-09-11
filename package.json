@@ -14,7 +14,7 @@
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/adapter-static": "^2.0.2",
     "@sveltejs/kit": "next",
-    "gh-pages": "^5.0.0",
+    "gh-pages": "^6.0.0",
     "iconify-icon": "^1.0.2",
     "prettier": "^2.8.8",
     "prettier-plugin-svelte": "^2.9.0",
