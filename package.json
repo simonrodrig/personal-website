@@ -12,7 +12,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
-    "@sveltejs/adapter-static": "^2.0.2",
+    "@sveltejs/adapter-static": "^2.0.3",
     "@sveltejs/kit": "next",
     "gh-pages": "^5.0.0",
     "iconify-icon": "^1.0.2",
