@@ -1,11 +1,12 @@
 ---
 title: Design Matters Coursework
 subtitle: A case study on improving snacking on Notre Dame's campus
-banner_href: "/projects/design_banner.png"
-demo_href: "https://drive.google.com/file/d/1JOcJHzdCbSPVUJk-XWJfoRNQNJ9OjCrm/view?usp=sharing"
+banner_href: '/projects/design_banner.png'
+demo_href: 'https://drive.google.com/file/d/1JOcJHzdCbSPVUJk-XWJfoRNQNJ9OjCrm/view?usp=sharing'
 ---
 
 ## Problem
+
 This project was done for a non-technical design class I took during my
 undergraduate studies named "Design Matters." It was a hands-on introduction
 to the concept of Human Centered Design, and specifically tasked with equipping
@@ -28,6 +29,7 @@ product that would address the given problem. This was not unlike the typical
 experience of "Agile" development in the software engineering space.
 
 ## Approach
+
 Part of the research process included interviews, where we conducted both
 one-on-one interviews, as well as what are called "Ethnographic" interviews,
 which are done with people in the places where they are already engaging with
@@ -43,6 +45,7 @@ simply easier to obtain fresh foods on campus, and if that experience itself was
 enjoyable.
 
 ## Solution
+
 For this project, we went through one round of ideation, collected feedback on
 four of our ideas, then selected a final idea based on our feedback that would
 best solve the problem space.

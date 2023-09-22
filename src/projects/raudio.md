@@ -1,13 +1,14 @@
 ---
 title: Raudio
 subtitle: Website and blog for an open source radio and streaming platform
-banner_href: "/projects/raudio_banner.png"
-source_href: "https://github.com/raudio-project/raudio-project.github.io/"
-demo_href: "https://raudio-project.github.io/"
+banner_href: '/projects/raudio_banner.png'
+source_href: 'https://github.com/raudio-project/raudio-project.github.io/'
+demo_href: 'https://raudio-project.github.io/'
 ---
 
 ## Problem
-This project was conducted for a course on 
+
+This project was conducted for a course on
 [Open Source Software Development](https://www3.nd.edu/~pbui/teaching/cse.40677.sp22/).
 The goals of this course were to familiarize students with the process and
 culture of software development in the open source field as well as introduce
@@ -25,7 +26,7 @@ users using the same streaming service and all individually paying for a
 subscription.
 
 In the open source space, notable software in this area that comes to mind are
-projects such as [Icecast](https://icecast.org/) or 
+projects such as [Icecast](https://icecast.org/) or
 [Shoutcast](https://www.shoutcast.com/). These programs are designed as personal
 internet radio solutions, and as a result, are often designed for large-scale
 distribution of audio streams, and it can often be difficult to configure an
@@ -33,6 +34,7 @@ audio server, and difficult for users to actually listen to that stream
 on all of their devices.
 
 ## Approach
+
 With the problem-space narrowed, we set out to design a software project that
 resembled some of the Linux internet radio solutions, but with an interface that
 could be easily accessed from a number of different clients. With that in mind,
@@ -42,7 +44,7 @@ clients to listen along with music. In researching possible methods of streaming
 the audio, we ultimately selected our primary client to take the form of a
 [Discord](https://discord.com) bot. Discord is an already existing chat platform
 with support for casual voice calling. In addition, there already existed a
-number of clients with support for streaming [YouTube](https://youtube.com) 
+number of clients with support for streaming [YouTube](https://youtube.com)
 content, but many of them were shutting down at the time due to copyright
 concerns, which we felt provided a perfect opportunity to provide an alternative
 service that addressed the desire for people to share music with each other
@@ -63,6 +65,7 @@ receiving contributions from the community. Our focus was to build a "Minimum
 Viable Product" (MVP) that addressed the basic needs of our problem.
 
 ## Solution
+
 Because our project requirements included marketing the project and maitaining
 a blog of our progress, I was tasked with developing the website that would
 accompany our project. This would serve as a simple landing page that points
@@ -70,7 +73,7 @@ users to our various GitHub repositories, as well as our blog, about page, and
 contribution guidelines. We decided early on in the project that we wouldn't
 be able to create a web-based client within the time provided, so therefore our
 website did not require any dynamic data to function. Because we also needed to
-create blog posts, it seemed that the perfect stack was a 
+create blog posts, it seemed that the perfect stack was a
 [Static Site Generator](https://www.cloudflare.com/learning/performance/static-site-generator/)
 (SSG). Using an SSG would allow us to quickly create blog posts with markdown
 and then transform the markdown into HTML templates. All transformation would
@@ -94,7 +97,7 @@ allowing you to ship some JavaScript if your site requires it. This would have
 been perfect if we wanted to ship a web client for our service while still
 keeping the landing page and blog completely static.
 
-I also would probably consider using a popular "metaframework" such as 
+I also would probably consider using a popular "metaframework" such as
 [SvelteKit](https://kit.svelte.dev/). SvelteKit is what this website is built
 with, and the main appeal of this approach would be the ease of adding
 interactivity to the page. Svelte's syntax already resembles many of the popular

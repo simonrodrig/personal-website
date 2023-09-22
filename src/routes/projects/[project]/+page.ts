@@ -21,7 +21,7 @@ export const load: PageLoad = async ({ params }) => {
     const importedMd = await import(`../../../projects/${params.project}.md`);
     // Force the type here
     return {
-      markdown: importedMd as MarkdownImport
+      markdown: importedMd as MarkdownImport,
     };
   } catch (e) {
     // Import fails: Couldn't find the file.

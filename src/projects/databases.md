@@ -1,10 +1,11 @@
 ---
 title: Notre Dame Event Tracker
 subtitle: A database concepts project for finding events on campus
-banner_href: "/projects/database_banner.png"
+banner_href: '/projects/database_banner.png'
 ---
 
 ## Problem
+
 This project was conducted for a course titled Database Concepts. As the name
 implies, it was dedicated to learning about the fundamentals of databases, both
 the theory and the practical application, and to apply those skills in
@@ -27,6 +28,7 @@ them, and so forth. The frontend was to be publicly accessible or easily
 downloadable.
 
 ## Approach
+
 In our research, we discovered that the events directory for our college
 actually uses a publicly available API provided by the university. However, we
 wanted to maintain our own listing of events, meaning we had to download the
@@ -39,11 +41,11 @@ Of course, this project contained the classic backend/frontend structure, so we
 also needed to decide on a stack to build this project. We selected MySQL as the
 database since it was a project requirement to run on a provided machine with
 that database installed. The backend we decided would be Python, since it was
-the most familiar to those delegated to making the backend. We had decided on 
+the most familiar to those delegated to making the backend. We had decided on
 the [CherryPy](https://github.com/cherrypy/cherrypy) server framework in order
 to create API endpoints that could be accessed by our frontend. In order to
 interact with our database, we used the officially provied driver by Oracle.
-In particular though, we needed to be careful about querying our database in 
+In particular though, we needed to be careful about querying our database in
 order to avoid SQL-injection attacks.
 
 The frontend, we decided, would be a pure web interface. I mostly led on
@@ -52,6 +54,7 @@ interacting with API endpoints, but not at the scale that would be required for
 this project. However, this would be a wonderful opportunity to learn.
 
 ## Solution
+
 Though we had delegated frontend and backend work to separate teams, we still
 had to work together not only to decide things like the schema, but also to
 standardize API endpoints. We ran into many issues with data-ingestion that
@@ -81,7 +84,7 @@ endpoints that can be acessed by your web application. It would have meant we
 were all working with a single codebase and in a single language, meaning our
 productivity would have been much greater.
 
-For our database, I believe a better fit for this project was to use an 
+For our database, I believe a better fit for this project was to use an
 [ORM](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping) in order
 to avoid writing raw SQL queries within our backend code. In particular
 something like [Prisma](https://www.prisma.io/) would have been a fantastic fit
@@ -99,5 +102,6 @@ optimized for mobile as well. This project in particular is what really
 sparked my passion for web developement and got me started on this career path.
 
 ## Note
+
 This project was completed for the purposes of a course in Database Concepts,
 therefore the source code cannot be distributed publicly.
