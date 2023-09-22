@@ -1,6 +1,8 @@
 {
   "name": "simonrodrig.github.io",
   "version": "0.0.2",
+  "type": "module",
+  "packageManager": "pnpm@8.7.6",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
@@ -8,24 +10,23 @@
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-    "deploy": "npm run build && gh-pages -d build/ -t true"
+    "deploy": "npm run build && gh-pages -d build/ -t true",
+    "format": "prettier --write ."
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "next",
-    "@sveltejs/adapter-static": "^2.0.2",
+    "@sveltejs/adapter-static": "^2.0.3",
     "@sveltejs/kit": "next",
-    "gh-pages": "^5.0.0",
-    "iconify-icon": "^1.0.2",
-    "prettier": "^2.8.8",
-    "prettier-plugin-svelte": "^2.9.0",
-    "sass": "^1.62.1",
-    "svelte": "^3.58.0",
-    "svelte-check": "^3.4.3",
+    "@zerodevx/svelte-img": "^2.0.3",
+    "iconify-icon": "^1.0.8",
+    "prettier": "^3.0.2",
+    "prettier-plugin-svelte": "^2.10.1",
+    "sass": "^1.68.0",
+    "svelte": "^4.2.1",
+    "svelte-check": "^3.5.2",
     "svelte-preprocess": "^5.0.4",
-    "svimg": "^3.2.0",
     "tslib": "^2.6.2",
-    "typescript": "~5.0.4",
-    "vite-plugin-markdown": "^2.2.0-2"
-  },
-  "type": "module"
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vite-plugin-markdown": "2.2.0-2"
+  }
 }

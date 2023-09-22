@@ -1,15 +1,16 @@
 ---
 title: Image Hosting Website
 subtitle: An image hoster built using React, TypeScript, and Framer Motion
-banner_href: "/projects/image_hosting_banner.png"
+banner_href: '/projects/image_hosting_banner.png'
 ---
 
 ## Problem
-This project was taken for a course in my undergraduate studies titled 
+
+This project was taken for a course in my undergraduate studies titled
 Modern Web Development. The goal for this course was to gain experience in web
 development purely through practical learning, and would start with the basic
 concepts using HTML, CSS, and "vanilla" JavaScript, and eventually move to
-React and create a complete full-stack application. 
+React and create a complete full-stack application.
 
 For our team's project, we decided to create a minimalist image hosting website.
 There are a variety of such sites available, such as
@@ -20,12 +21,13 @@ uploading of images without an account and to serve the original files back to
 the user for use in chat platforms like Discord or IRC.
 
 ## Approach
+
 Because the scope of the course was limited to frontend development, the backend
 for this website was to be a hosted solution. Specifically we utilized
 [Back4App](https://www.back4app.com/), a service hosted on the
 [Parse](https://docs.parseplatform.org/) framework, which is an open-source
 Node.js backend. It provides a number of SDKs for various platforms to interact
-with the server, similarly to how one might use 
+with the server, similarly to how one might use
 [Firebase](https://firebase.google.com/). The benefits of using
 Parse included the ability to act with a realtime database, which has a number
 of useful abstractions built-in. It also included a very useful web interface
@@ -39,6 +41,7 @@ re-write of the application in React, along with migrating the front-end code
 to TypeScript and SCSS.
 
 ## Solution
+
 The final deliverable fit neatly within our goal of shipping a minimal product.
 The home page included a simple box that could be used to upload an image,
 along with a button that would route to a separate page containing a gallery
@@ -54,7 +57,7 @@ was one of those user stories, but we also included two others:
 The first was an authentication system. This would allow users to sign up with
 our service to upload images, and allow their gallery to display their previous
 images without the need for cookies or local storage. This would prove to be
-seamless since Parse includes authentication as part of its backend. 
+seamless since Parse includes authentication as part of its backend.
 
 We also included a complete revamp of the UI in the application, making use of a
 library named [Framer Motion](https://www.framer.com/motion/) to add animations
@@ -80,5 +83,6 @@ is also an alternative offering called [Fresh](https://fresh.deno.dev/) that
 utilizes [Deno](https://deno.land/) as its JavaScript engine rather than Node.js.
 
 ## Note
+
 This project was completed for the purposes of a course in Web Development,
 therefore the source code cannot be distributed publicly.

@@ -1,9 +1,11 @@
 <script lang="ts">
   import Portrait from '$lib/blobs/BlobPortrait.svelte';
   import Card from '$lib/Card.svelte';
-  import Image from 'svimg';
   import ProjectLink from '$lib/ProjectLink.svelte';
   import ContactCard from '$lib/ContactCard.svelte';
+  import Image from '@zerodevx/svelte-img';
+  
+  import headshot from '$lib/assets/headshot.jpeg?as=run';
 </script>
 
 <svelte:head>
@@ -18,7 +20,7 @@
 <section id="home" class="hero">
   <div class="Portrait-Container">
     <Portrait innerLayerColor="#E95678" outerLayerColor="#232530">
-      <Image src="headshot.jpeg" alt="Headshot portrait of Simon" immediate />
+      <Image src={headshot} alt="Headshot portrait of Simon" immediate />
     </Portrait>
   </div>
 
