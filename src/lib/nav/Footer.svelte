@@ -14,7 +14,7 @@
   <p>© 2022 Simon Rodriguez</p>
   <p>
     This website was written with Svelte and SvelteKit. <a
-      href="https://github.com/simonrodrig/simonrodrig.github.io">See the source code here</a
+      href="https://github.com/simonrodrig/personal-website">See the source code here</a
     >.
   </p>
 </footer>
