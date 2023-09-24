@@ -20,7 +20,7 @@
 <section id="home" class="hero">
   <div class="Portrait-Container">
     <Portrait innerLayerColor="#E95678" outerLayerColor="#232530">
-      <Image src={headshot} alt="Headshot portrait of Simon" immediate />
+      <Image src={headshot} alt="Headshot portrait of Simon" loading="eager" />
     </Portrait>
   </div>
 
