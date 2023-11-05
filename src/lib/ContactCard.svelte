@@ -16,7 +16,7 @@
   <a id="email" href="mailto:simon@rodrig.dev">simon@rodrig.dev</a>
 
   <h3>Job Materials</h3>
-  <p>Last Updated: Feb 22, 2023</p>
+  <p>Last Updated: November 04, 2023</p>
   <br>
   <div class="links">
     <IconCardLink href="/resume.pdf" iconName="carbon:document-pdf">
