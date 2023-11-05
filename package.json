@@ -1,6 +1,6 @@
 {
   "name": "personal-website",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "packageManager": "pnpm@8.7.6",
   "engines": {
